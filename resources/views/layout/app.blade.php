@@ -102,6 +102,71 @@
     .example-modal .modal {
       background: transparent !important;
     }
+/* tree folder for image page
+ */
+ .tree, .tree ul {
+    margin:0;
+    padding:0;
+    list-style:none
+}
+.tree ul {
+    margin-left:1em;
+    position:relative
+}
+.tree ul ul {
+    margin-left:.5em
+}
+.tree ul:before {
+    content:"";
+    display:block;
+    width:0;
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    border-left:1px solid
+}
+.tree li {
+    margin:0;
+    padding:0 1em;
+    line-height:2em;
+    color:#369;
+    font-weight:700;
+    position:relative
+}
+.tree ul li:before {
+    content:"";
+    display:block;
+    width:10px;
+    height:0;
+    border-top:1px solid;
+    margin-top:-1px;
+    position:absolute;
+    top:1em;
+    left:0
+}
+.tree ul li:last-child:before {
+    background:#fff;
+    height:auto;
+    top:1em;
+    bottom:0
+}
+.indicator {
+    margin-right:5px;
+}
+.tree li a {
+    text-decoration: none;
+    color:#369;
+}
+.tree li button, .tree li button:active, .tree li button:focus {
+    text-decoration: none;
+    color:#369;
+    border:none;
+    background:transparent;
+    margin:0px 0px 0px 0px;
+    padding:0px 0px 0px 0px;
+    outline: 0;
+}
     </style>
 </head>
 <body hold-transition skin-blue sidebar-mini>
@@ -401,7 +466,7 @@
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">MAIN NAVIGATION</li>
-        <li><a href="{{url('/image')}}">Images</a></li>
+        <li><a href="{{url('/image')}}"><i class="far fa-image"></i> Images</a></li>
         <li class="active treeview">
 
           <a href="#">
@@ -975,21 +1040,20 @@
 <!-- jQuery 3 -->
 <script src="{{asset('js/jquery.min.js')}}"></script>
 <!-- jQuery UI 1.11.4 -->
-<script src="{{asset('bower_components/jquery-ui/jquery-ui.min.js')}}"></script>
+<script src="{{asset('js/jquery-ui.min.js')}}"></script>
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
 <script>
   $.widget.bridge('uibutton', $.ui.button);
 </script>
 <!-- Bootstrap 3.3.7 -->
-<script src="{{asset('bower_components/bootstrap/dist/js/bootstrap.min.js')}}"></script>
-
+<script src="{{asset('js/bootstrap.min.js')}}"></script>
 <!-- AdminLTE App -->
 <script src="{{asset('js/them.js')}}"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="{{asset('js/dashboard.js')}}"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="{{asset('js/demo.js')}}"></script>
+{{-- <script src="{{asset('js/demo.js')}}"></script> --}}
 <!-- page script -->
-<script src="{{asset('js/cusJs.js')}}"></script>
+<script src="{{asset('js/custom.js')}}"></script>
 </body>
 </html>
