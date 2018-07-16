@@ -23,6 +23,15 @@ Route::get('/icons', 'HomeController@icons');
 Route::get('/buttons', 'HomeController@buttons');
 Route::get('/sliders', 'HomeController@slider');
 Route::get('/timeline', 'HomeController@timeline');
+// Route for Images magement
+Route::get('/image/makeDir', 'ImageController@makeDir');
+// Route Image upload
+Route::get('/image/upload', 'ImageController@upload');
 
+
+// Rout for Users Management
+Route::get('/userLists', 'UserController@index');
+Route::get('/user/create', 'UserController@create');
+Route::get('/user/update', 'UserController@update');
 // image
 Route::get('/image', 'ImageController@index');
