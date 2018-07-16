@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/font-awesome.css')}}">
     <link rel="stylesheet" href="{{asset('css/them.css')}}">
-<link rel="stylesheet" href="{{asset('css/skin-green.css')}}">
-
+    <link rel="stylesheet" href="{{asset('css/skin-green.css')}}">
+    <link rel="stylesheet" href="{{asset('css/dropzone.css')}}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
     <style>
       .color-palette {
@@ -1049,6 +1049,8 @@
 <script>
   $.widget.bridge('uibutton', $.ui.button);
 </script>
+{{-- drop zone --}}
+<script src="{{asset('js/dropzone.js  ')}}"></script>
 <!-- AdminLTE App -->
 <script src="{{asset('js/them.js')}}"></script>
 <!-- page script -->
