@@ -11,7 +11,6 @@
   </ol>
 </section>
 @include('inc.card')
-
   <!-- Main row -->
   <div class="row">
     <!-- Left col -->
@@ -50,7 +49,7 @@
         <div class="box-body chat" id="chat-box">
           <!-- chat item -->
           <div class="item">
-            <img src="dist/img/user4-128x128.jpg" alt="user image" class="online">
+            <img src="{{asset('img/user4-128x128.jpg')}}" alt="user image" class="online">
 
             <p class="message">
               <a href="#" class="name">
@@ -77,7 +76,7 @@
           <!-- /.item -->
           <!-- chat item -->
           <div class="item">
-            <img src="dist/img/user3-128x128.jpg" alt="user image" class="offline">
+            <img src="{{asset('img/user3-128x128.jpg')}}" alt="user image" class="offline">
 
             <p class="message">
               <a href="#" class="name">
@@ -92,7 +91,7 @@
           <!-- /.item -->
           <!-- chat item -->
           <div class="item">
-            <img src="dist/img/user2-160x160.jpg" alt="user image" class="offline">
+            <img src="{{asset('img/user2-160x160.jpg')}}" alt="user image" class="offline">
 
             <p class="message">
               <a href="#" class="name">
@@ -246,7 +245,7 @@
           </div>
           <!-- /. tools -->
         </div>
-        <div class="box-body">
+        {{-- <div class="box-body">
           <form action="#" method="post">
             <div class="form-group">
               <input type="email" class="form-control" name="emailto" placeholder="Email to:">
@@ -255,11 +254,10 @@
               <input type="text" class="form-control" name="subject" placeholder="Subject">
             </div>
             <div>
-              <textarea class="textarea" placeholder="Message"
-                        style="width: 100%; height: 125px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+              <textarea class="textarea" placeholder="Message" style="width: 100%; height: 125px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
             </div>
           </form>
-        </div>
+        </div> --}}
         <div class="box-footer clearfix">
           <button type="button" class="pull-right btn btn-default" id="sendEmail">Send
             <i class="fa fa-arrow-circle-right"></i></button>

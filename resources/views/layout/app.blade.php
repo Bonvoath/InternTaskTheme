@@ -6,8 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Admin LTE</title>
     <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{asset('css/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/font-awesome.css')}}">
     <link rel="stylesheet" href="{{asset('css/them.css')}}">
+<link rel="stylesheet" href="{{asset('css/skin-green.css')}}">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
     <style>
@@ -169,7 +170,7 @@
 }
     </style>
 </head>
-<body hold-transition skin-blue sidebar-mini>
+<body class="hold-transition skin-green sidebar-mini fixed">
     <div class="wrapper">
         <header class="main-header">
             <!-- Logo -->
@@ -202,7 +203,7 @@
                           <li><!-- start message -->
                             <a href="#">
                               <div class="pull-left">
-                                <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                                <img src="{{asset('img/user2-160x160.jpg')}}" class="img-circle" alt="User Image">
                               </div>
                               <h4>
                                 Support Team
@@ -215,7 +216,7 @@
                           <li>
                             <a href="#">
                               <div class="pull-left">
-                                <img src="dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
+                                <img src="{{asset('img/user3-128x128.jpg')}}" class="img-circle" alt="User Image">
                               </div>
                               <h4>
                                 AdminLTE Design Team
@@ -227,7 +228,7 @@
                           <li>
                             <a href="#">
                               <div class="pull-left">
-                                <img src="dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
+                                <img src="{{asset('img/user4-128x128.jpg')}}" class="img-circle" alt="User Image">
                               </div>
                               <h4>
                                 Developers
@@ -239,7 +240,7 @@
                           <li>
                             <a href="#">
                               <div class="pull-left">
-                                <img src="dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
+                                <img src="{{asset('img/user3-128x128.jpg')}}" class="img-circle" alt="User Image">
                               </div>
                               <h4>
                                 Sales Department
@@ -251,7 +252,7 @@
                           <li>
                             <a href="#">
                               <div class="pull-left">
-                                <img src="dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
+                                <img src="{{asset('img/user4-128x128.jpg')}}" class="img-circle" alt="User Image">
                               </div>
                               <h4>
                                 Reviewers
@@ -388,14 +389,13 @@
                   <!-- User Account: style can be found in dropdown.less -->
                   <li class="dropdown user user-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                      <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+                      <img src="{{asset('img/user2-160x160.jpg')}}" class="user-image" alt="User Image">
                       <span class="hidden-xs">Alexander Pierce</span>
                     </a>
                     <ul class="dropdown-menu">
                       <!-- User image -->
                       <li class="user-header">
-                        <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
-        
+                        <img src="{{asset('img/user2-160x160.jpg')}}" class="img-circle" alt="User Image">
                         <p>
                           Alexander Pierce - Web Developer
                           <small>Member since Nov. 2012</small>
@@ -445,7 +445,7 @@
       <!-- Sidebar user panel -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+          <img src="{{asset('img/user2-160x160.jpg')}}" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
           <p>Alexander Pierce</p>
@@ -466,8 +466,8 @@
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">MAIN NAVIGATION</li>
-        <li><a href="{{url('/image')}}"><i class="far fa-image"></i> Images</a></li>
-        <li class="active treeview">
+        <li><a href="{{url('/image')}}"><i class="fa fa-image"></i> Images</a></li>
+        <li class="treeview">
 
           <a href="#">
             <i class="fa fa-dashboard"></i> <span>Dashboard</span>
@@ -476,7 +476,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li class="active"><a href="{{ url('/')}}"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
+            <li><a href="{{ url('/')}}"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
             <li><a href="{{ url('/dashboard2')}}"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
           </ul>
         </li>
@@ -1038,21 +1038,19 @@
 </div>
 <!-- ./wrapper -->
 <!-- jQuery 3 -->
-<script src="{{asset('js/jquery.min.js')}}"></script>
+<script src="{{URL::asset('js/jquery.min.js')}}"></script>
+{{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> --}}
+<!-- Bootstrap 3.3.7 -->
+<script src="{{asset('js/bootstrap.min.js')}}"></script>
+
 <!-- jQuery UI 1.11.4 -->
 <script src="{{asset('js/jquery-ui.min.js')}}"></script>
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
 <script>
   $.widget.bridge('uibutton', $.ui.button);
 </script>
-<!-- Bootstrap 3.3.7 -->
-<script src="{{asset('js/bootstrap.min.js')}}"></script>
 <!-- AdminLTE App -->
 <script src="{{asset('js/them.js')}}"></script>
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="{{asset('js/dashboard.js')}}"></script>
-<!-- AdminLTE for demo purposes -->
-{{-- <script src="{{asset('js/demo.js')}}"></script> --}}
 <!-- page script -->
 <script src="{{asset('js/custom.js')}}"></script>
 </body>

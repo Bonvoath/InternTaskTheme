@@ -7,7 +7,7 @@
         <div class="col-md-4">
             <div class="row" style="margin-top: 15px;margin-bottom: 15px;">
                 <div class="col-md-4">
-                    <button class="btn btn-primary btn-block">Upload</button>
+                    <button class="btn btn-primary btn-block"><i class="fa fa-"></i> Upload</button>
                 </div>
                 <div class="col-md-4">
                     <button class="btn btn-primary btn-block">Delete</button>

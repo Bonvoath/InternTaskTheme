@@ -430,7 +430,7 @@
                         <span class="direct-chat-timestamp pull-right">23 Jan 2:00 pm</span>
                       </div>
                       <!-- /.direct-chat-info -->
-                      <img class="direct-chat-img" src="../dist/img/user1-128x128.jpg" alt="Message User Image"><!-- /.direct-chat-img -->
+                      <img class="direct-chat-img" src="{{asset('img/user1-128x128.jpg')}}" alt="Message User Image"><!-- /.direct-chat-img -->
                       <div class="direct-chat-text">
                         Is this template really for free? That's unbelievable!
                       </div>
@@ -445,7 +445,7 @@
                         <span class="direct-chat-timestamp pull-left">23 Jan 2:05 pm</span>
                       </div>
                       <!-- /.direct-chat-info -->
-                      <img class="direct-chat-img" src="../dist/img/user3-128x128.jpg" alt="Message User Image"><!-- /.direct-chat-img -->
+                      <img class="direct-chat-img" src="{{asset('img/user3-128x128.jpg')}}" alt="Message User Image"><!-- /.direct-chat-img -->
                       <div class="direct-chat-text">
                         You better believe it!
                       </div>
@@ -460,7 +460,7 @@
                     <ul class="contacts-list">
                       <li>
                         <a href="#">
-                          <img class="contacts-list-img" src="../dist/img/user1-128x128.jpg" alt="User Image">
+                          <img class="contacts-list-img" src="{{asset('img/user1-128x128.jpg')}}" alt="User Image">
     
                           <div class="contacts-list-info">
                                 <span class="contacts-list-name">
@@ -521,7 +521,7 @@
                         <span class="direct-chat-timestamp pull-right">23 Jan 2:00 pm</span>
                       </div>
                       <!-- /.direct-chat-info -->
-                      <img class="direct-chat-img" src="../dist/img/user1-128x128.jpg" alt="Message User Image"><!-- /.direct-chat-img -->
+                      <img class="direct-chat-img" src="{{asset('img/user1-128x128.jpg')}}" alt="Message User Image"><!-- /.direct-chat-img -->
                       <div class="direct-chat-text">
                         Is this template really for free? That's unbelievable!
                       </div>
@@ -536,7 +536,7 @@
                         <span class="direct-chat-timestamp pull-left">23 Jan 2:05 pm</span>
                       </div>
                       <!-- /.direct-chat-info -->
-                      <img class="direct-chat-img" src="../dist/img/user3-128x128.jpg" alt="Message User Image"><!-- /.direct-chat-img -->
+                      <img class="direct-chat-img" src="{{asset('img/user3-128x128.jpg')}}" alt="Message User Image"><!-- /.direct-chat-img -->
                       <div class="direct-chat-text">
                         You better believe it!
                       </div>
@@ -551,7 +551,7 @@
                     <ul class="contacts-list">
                       <li>
                         <a href="#">
-                          <img class="contacts-list-img" src="../dist/img/user1-128x128.jpg" alt="User Image">
+                          <img class="contacts-list-img" src="{{asset('img/user1-128x128.jpg')}}" alt="User Image">
     
                           <div class="contacts-list-info">
                                 <span class="contacts-list-name">
@@ -612,7 +612,7 @@
                         <span class="direct-chat-timestamp pull-right">23 Jan 2:00 pm</span>
                       </div>
                       <!-- /.direct-chat-info -->
-                      <img class="direct-chat-img" src="../dist/img/user1-128x128.jpg" alt="Message User Image"><!-- /.direct-chat-img -->
+                      <img class="direct-chat-img" src="{{asset('img/user1-128x128.jpg')}}" alt="Message User Image"><!-- /.direct-chat-img -->
                       <div class="direct-chat-text">
                         Is this template really for free? That's unbelievable!
                       </div>
@@ -627,7 +627,7 @@
                         <span class="direct-chat-timestamp pull-left">23 Jan 2:05 pm</span>
                       </div>
                       <!-- /.direct-chat-info -->
-                      <img class="direct-chat-img" src="../dist/img/user3-128x128.jpg" alt="Message User Image"><!-- /.direct-chat-img -->
+                      <img class="direct-chat-img" src="{{asset('img/user3-128x128.jpg')}}" alt="Message User Image"><!-- /.direct-chat-img -->
                       <div class="direct-chat-text">
                         You better believe it!
                       </div>
@@ -642,7 +642,7 @@
                     <ul class="contacts-list">
                       <li>
                         <a href="#">
-                          <img class="contacts-list-img" src="../dist/img/user1-128x128.jpg" alt="User Image">
+                          <img class="contacts-list-img" src="{{asset('img/user1-128x128.jpg')}}" alt="User Image">
     
                           <div class="contacts-list-info">
                                 <span class="contacts-list-name">
@@ -703,7 +703,7 @@
                         <span class="direct-chat-timestamp pull-right">23 Jan 2:00 pm</span>
                       </div>
                       <!-- /.direct-chat-info -->
-                      <img class="direct-chat-img" src="../dist/img/user1-128x128.jpg" alt="Message User Image"><!-- /.direct-chat-img -->
+                      <img class="direct-chat-img" src="{{asset('img/user1-128x128.jpg')}}" alt="Message User Image"><!-- /.direct-chat-img -->
                       <div class="direct-chat-text">
                         Is this template really for free? That's unbelievable!
                       </div>
@@ -718,7 +718,7 @@
                         <span class="direct-chat-timestamp pull-left">23 Jan 2:05 pm</span>
                       </div>
                       <!-- /.direct-chat-info -->
-                      <img class="direct-chat-img" src="../dist/img/user3-128x128.jpg" alt="Message User Image"><!-- /.direct-chat-img -->
+                      <img class="direct-chat-img" src="{{asset('img/user3-128x128.jpg')}}" alt="Message User Image"><!-- /.direct-chat-img -->
                       <div class="direct-chat-text">
                         You better believe it!
                       </div>
@@ -733,7 +733,7 @@
                     <ul class="contacts-list">
                       <li>
                         <a href="#">
-                          <img class="contacts-list-img" src="../dist/img/user1-128x128.jpg" alt="User Image">
+                          <img class="contacts-list-img" src="{{asset('img/user1-128x128.jpg')}}" alt="User Image">
     
                           <div class="contacts-list-info">
                                 <span class="contacts-list-name">
@@ -779,7 +779,7 @@
                 <!-- Add the bg color to the header using any of the bg-* classes -->
                 <div class="widget-user-header bg-yellow">
                   <div class="widget-user-image">
-                    <img class="img-circle" src="../dist/img/user7-128x128.jpg" alt="User Avatar">
+                    <img class="img-circle" src="{{asset('img/user7-128x128.jpg')}}" alt="User Avatar">
                   </div>
                   <!-- /.widget-user-image -->
                   <h3 class="widget-user-username">Nadia Carmichael</h3>
@@ -806,7 +806,7 @@
                   <h5 class="widget-user-desc">Founder &amp; CEO</h5>
                 </div>
                 <div class="widget-user-image">
-                  <img class="img-circle" src="../dist/img/user1-128x128.jpg" alt="User Avatar">
+                  <img class="img-circle" src="{{asset('img/user1-128x128.jpg')}}" alt="User Avatar">
                 </div>
                 <div class="box-footer">
                   <div class="row">
@@ -845,12 +845,12 @@
               <!-- Widget: user widget style 1 -->
               <div class="box box-widget widget-user">
                 <!-- Add the bg color to the header using any of the bg-* classes -->
-                <div class="widget-user-header bg-black" style="background: url('../dist/img/photo1.png') center center;">
+                <div class="widget-user-header bg-black" style="background: url('img/photo1.png') center center;">
                   <h3 class="widget-user-username">Elizabeth Pierce</h3>
                   <h5 class="widget-user-desc">Web Designer</h5>
                 </div>
                 <div class="widget-user-image">
-                  <img class="img-circle" src="../dist/img/user3-128x128.jpg" alt="User Avatar">
+                  <img class="img-circle" src="{{asset('img/user3-128x128.jpg')}}" alt="User Avatar">
                 </div>
                 <div class="box-footer">
                   <div class="row">
@@ -894,7 +894,7 @@
               <div class="box box-widget">
                 <div class="box-header with-border">
                   <div class="user-block">
-                    <img class="img-circle" src="../dist/img/user1-128x128.jpg" alt="User Image">
+                    <img class="img-circle" src="{{asset('img/user1-128x128.jpg')}}" alt="User Image">
                     <span class="username"><a href="#">Jonathan Burke Jr.</a></span>
                     <span class="description">Shared publicly - 7:30 PM Today</span>
                   </div>
@@ -910,7 +910,7 @@
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body">
-                  <img class="img-responsive pad" src="../dist/img/photo2.png" alt="Photo">
+                  <img class="img-responsive pad" src="{{asset('img/photo2.png')}}" alt="Photo">
     
                   <p>I took this photo this morning. What do you guys think?</p>
                   <button type="button" class="btn btn-default btn-xs"><i class="fa fa-share"></i> Share</button>
@@ -921,7 +921,7 @@
                 <div class="box-footer box-comments">
                   <div class="box-comment">
                     <!-- User image -->
-                    <img class="img-circle img-sm" src="../dist/img/user3-128x128.jpg" alt="User Image">
+                    <img class="img-circle img-sm" src="{{asset('img/user3-128x128.jpg')}}" alt="User Image">
     
                     <div class="comment-text">
                           <span class="username">
@@ -936,7 +936,7 @@
                   <!-- /.box-comment -->
                   <div class="box-comment">
                     <!-- User image -->
-                    <img class="img-circle img-sm" src="../dist/img/user4-128x128.jpg" alt="User Image">
+                    <img class="img-circle img-sm" src="{{asset('img/user4-128x128.jpg')}}" alt="User Image">
     
                     <div class="comment-text">
                           <span class="username">
@@ -953,7 +953,7 @@
                 <!-- /.box-footer -->
                 <div class="box-footer">
                   <form action="#" method="post">
-                    <img class="img-responsive img-circle img-sm" src="../dist/img/user4-128x128.jpg" alt="Alt Text">
+                    <img class="img-responsive img-circle img-sm" src="{{asset('img/user4-128x128.jpg')}}" alt="Alt Text">
                     <!-- .img-push is used to add margin to elements next to floating images -->
                     <div class="img-push">
                       <input type="text" class="form-control input-sm" placeholder="Press enter to post comment">
@@ -970,7 +970,7 @@
               <div class="box box-widget">
                 <div class="box-header with-border">
                   <div class="user-block">
-                    <img class="img-circle" src="../dist/img/user1-128x128.jpg" alt="User Image">
+                    <img class="img-circle" src="{{asset('img/user1-128x128.jpg')}}" alt="User Image">
                     <span class="username"><a href="#">Jonathan Burke Jr.</a></span>
                     <span class="description">Shared publicly - 7:30 PM Today</span>
                   </div>
@@ -999,7 +999,7 @@
     
                   <!-- Attachment -->
                   <div class="attachment-block clearfix">
-                    <img class="attachment-img" src="../dist/img/photo1.png" alt="Attachment Image">
+                    <img class="attachment-img" src="{{asset('img/photo1.png')}}" alt="Attachment Image">
     
                     <div class="attachment-pushed">
                       <h4 class="attachment-heading"><a href="http://www.lipsum.com/">Lorem ipsum text generator</a></h4>
@@ -1023,7 +1023,7 @@
                 <div class="box-footer box-comments">
                   <div class="box-comment">
                     <!-- User image -->
-                    <img class="img-circle img-sm" src="../dist/img/user3-128x128.jpg" alt="User Image">
+                    <img class="img-circle img-sm" src="{{asset('img/user3-128x128.jpg')}}" alt="User Image">
     
                     <div class="comment-text">
                           <span class="username">
@@ -1038,7 +1038,7 @@
                   <!-- /.box-comment -->
                   <div class="box-comment">
                     <!-- User image -->
-                    <img class="img-circle img-sm" src="../dist/img/user5-128x128.jpg" alt="User Image">
+                    <img class="img-circle img-sm" src="{{asset('img/user5-128x128.jpg')}}" alt="User Image">
     
                     <div class="comment-text">
                           <span class="username">
@@ -1056,7 +1056,7 @@
                 <!-- /.box-footer -->
                 <div class="box-footer">
                   <form action="#" method="post">
-                    <img class="img-responsive img-circle img-sm" src="../dist/img/user4-128x128.jpg" alt="Alt Text">
+                    <img class="img-responsive img-circle img-sm" src="{{asset('img/user4-128x128.jpg')}}" alt="Alt Text">
                     <!-- .img-push is used to add margin to elements next to floating images -->
                     <div class="img-push">
                       <input type="text" class="form-control input-sm" placeholder="Press enter to post comment">
