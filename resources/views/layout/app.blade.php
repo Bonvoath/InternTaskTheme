@@ -478,6 +478,7 @@
           <ul class="treeview-menu">
             <li><a href="{{ url('/')}}"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
             <li><a href="{{ url('/dashboard2')}}"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
+            <li><a href="{{ url('/userLists')}}"><i class="fa fa-circle-o"></i> User Management</a></li>
           </ul>
         </li>
         <li class="treeview">
