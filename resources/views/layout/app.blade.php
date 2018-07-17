@@ -9,8 +9,6 @@
     <link rel="stylesheet" href="{{asset('css/font-awesome.css')}}">
     <link rel="stylesheet" href="{{asset('css/them.css')}}">
     <link rel="stylesheet" href="{{asset('css/skin-green.css')}}">
-    <link rel="stylesheet" href="{{asset('css/dropzone.css')}}">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
     <style>
       .color-palette {
         height: 35px;
@@ -169,6 +167,7 @@
     outline: 0;
 }
     </style>
+    @yield('css')
 </head>
 <body class="hold-transition skin-green sidebar-mini fixed">
     <div class="wrapper">
