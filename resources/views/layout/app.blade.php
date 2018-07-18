@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="_token" content="{!! csrf_token() !!}" />
     <title>Admin LTE</title>
     <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/font-awesome.css')}}">
     <link rel="stylesheet" href="{{asset('css/them.css')}}">
-<link rel="stylesheet" href="{{asset('css/skin-green.css')}}">
+    <link rel="stylesheet" href="{{asset('css/skin-green.css')}}">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
     <style>
@@ -17,7 +18,6 @@
         line-height: 35px;
         text-align: center;
       }
-  
       .color-palette-set {
         margin-bottom: 15px;
       }
@@ -1054,5 +1054,6 @@
 <script src="{{asset('js/them.js')}}"></script>
 <!-- page script -->
 <script src="{{asset('js/custom.js')}}"></script>
+<script src="{{asset('js/models/user.js')}}"></script>
 </body>
 </html>
