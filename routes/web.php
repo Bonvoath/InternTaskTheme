@@ -28,12 +28,15 @@ Route::get('/timeline', 'HomeController@timeline');
 Route::get('/image/makeDir', 'ImageController@makeDir');
 // Route Image upload
 Route::get('/image/upload', 'ImageController@upload');
-
-
 // Rout for Users Management
 Route::get('/userLists', 'UserController@index');
-Route::get('/user/create', 'UserController@create');
-Route::get('/user/update', 'UserController@update');
+
+Route::get('/', 'UserController@index'); 
+Route::get('/getUser', 'UserController@getUser'); 
+
+Route::post('/post', 'UserController@store');
+Route::get('createUser', 'UserController@showCreate');
+Route::delete('/user/{id}', 'UserController@destroy');
 // image
 Route::get('/image', 'ImageController@index');
 
