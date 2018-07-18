@@ -36,3 +36,8 @@ Route::get('/user/create', 'UserController@create');
 Route::get('/user/update', 'UserController@update');
 // image
 Route::get('/image', 'ImageController@index');
+
+Route::group(['prefix'=>'role'], function(){
+    Route::get('', 'RoleController@index');
+    Route::post('/list', 'RoleController@list');
+});

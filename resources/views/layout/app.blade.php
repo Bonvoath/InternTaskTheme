@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="csrf-token" content = "{{csrf_token()}}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Admin LTE</title>
@@ -1039,22 +1040,15 @@
 </div>
 <!-- ./wrapper -->
 <!-- jQuery 3 -->
-<script src="{{URL::asset('js/jquery.min.js')}}"></script>
-{{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> --}}
-<!-- Bootstrap 3.3.7 -->
-<script src="{{asset('js/bootstrap.min.js')}}"></script>
+<script src="{{asset('js/plugins/jquery/jquery-2.2.3.min.js')}}"></script>
+<script src="{{asset('js/plugins/bootstrap/bootstrap.min.js')}}"></script>
 
-<!-- jQuery UI 1.11.4 -->
-<script src="{{asset('js/jquery-ui.min.js')}}"></script>
-<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-<script>
-  $.widget.bridge('uibutton', $.ui.button);
-</script>
 {{-- drop zone --}}
 <script src="{{asset('js/dropzone.js  ')}}"></script>
 <!-- AdminLTE App -->
 <script src="{{asset('js/them.js')}}"></script>
 <!-- page script -->
 <script src="{{asset('js/custom.js')}}"></script>
+@yield('js')
 </body>
 </html>
