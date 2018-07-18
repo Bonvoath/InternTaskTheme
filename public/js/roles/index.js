@@ -4,5 +4,26 @@
         Role.toList().then(function(data){
             Role.renderTable($('#ltable tbody'));
         });
+
+        $('#modalRole').modal({
+            backdrop: false,
+            show: false
+        });
+
+        $('body').on('click', '#btnNew', function(){
+            $('#modalRole').modal('show');
+        });
+
+        $('body').on('click', '#btnSave', function(){
+            var req = {
+                Name: $('#name').val()
+            };
+            Role.saveChange(req).then(function(){
+                Role.toList().then(function(data){
+                    Role.renderTable($('#ltable tbody'));
+                    $('#modalRole').modal('hide');
+                });
+            });
+        });
     }
 })();

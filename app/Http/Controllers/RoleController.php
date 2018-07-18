@@ -43,18 +43,17 @@ class RoleController extends Controller
      */
     public function store(Request $request)
     {
-        /*
         $validator = Validator::make($request->all(), Role::validateRole());
         if ($validator->fails()){
             $this->invalid($validator);
         }else{
             $role = new Role();
-            $role->name = $request->name;
+            $role->Name = $request->Name;
             $role->save();
+            $this->setData($role);
         }
 
         return response()->json($this->result);
-        */
     }
 
     /**
