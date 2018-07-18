@@ -39,3 +39,8 @@ Route::get('createUser', 'UserController@showCreate');
 Route::delete('/user/{id}', 'UserController@destroy');
 // image
 Route::get('/image', 'ImageController@index');
+
+Route::group(['prefix'=>'role'], function(){
+    Route::get('', 'RoleController@index');
+    Route::post('/list', 'RoleController@list');
+});

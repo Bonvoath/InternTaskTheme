@@ -2,16 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="csrf-token" content = "{{csrf_token()}}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="_token" content="{!! csrf_token() !!}" />
     <title>Admin LTE</title>
+    
     <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/font-awesome.css')}}">
     <link rel="stylesheet" href="{{asset('css/them.css')}}">
     <link rel="stylesheet" href="{{asset('css/skin-green.css')}}">
-
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
     <style>
       .color-palette {
         height: 35px;
@@ -169,6 +171,7 @@
     outline: 0;
 }
     </style>
+    @yield('css')
 </head>
 <body class="hold-transition skin-green sidebar-mini fixed">
     <div class="wrapper">
@@ -1039,21 +1042,19 @@
 </div>
 <!-- ./wrapper -->
 <!-- jQuery 3 -->
-<script src="{{URL::asset('js/jquery.min.js')}}"></script>
-{{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> --}}
-<!-- Bootstrap 3.3.7 -->
-<script src="{{asset('js/bootstrap.min.js')}}"></script>
+<script src="{{asset('js/plugins/jquery/jquery-2.2.3.min.js')}}"></script>
+<script src="{{asset('js/plugins/bootstrap/bootstrap.min.js')}}"></script>
 
-<!-- jQuery UI 1.11.4 -->
-<script src="{{asset('js/jquery-ui.min.js')}}"></script>
-<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-<script>
-  $.widget.bridge('uibutton', $.ui.button);
-</script>
+{{-- drop zone --}}
+<script src="{{asset('js/dropzone.js  ')}}"></script>
 <!-- AdminLTE App -->
 <script src="{{asset('js/them.js')}}"></script>
 <!-- page script -->
 <script src="{{asset('js/custom.js')}}"></script>
+{{-- crud js --}}
 <script src="{{asset('js/models/user.js')}}"></script>
+
+@yield('js')
+
 </body>
 </html>
