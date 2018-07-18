@@ -88,38 +88,40 @@
             <ul id="tree2">
                 <li>TECH
                     <ul>
-                        <li>Company Maintenance</li>
+                        {{-- <li>Company Maintenance</li> --}}
                          <li>Employees
                              <ul>
-                                <li>Reports
+                                {{-- <li>Reports --}}
                                     <ul>
-                                        <li>Report1</li>
-                                        <li>Report2</li>
-                                        <li>Report3</li>
+                                        {{-- <li>Report1</li> --}}
+                                        {{-- <li>Report2</li> --}}
+                                        {{-- <li>Report3</li> --}}
                                     </ul>
                                 </li>
-                                <li>Employee Maint.</li>
+                                {{-- <li>Employee Maint.</li> --}}
                             </ul>
                         </li>
-                        <li>Human Resources</li>
+                        {{-- <li>Human Resources</li> --}}
                     </ul>
                 </li>
                 <li>XRP
                     <ul>
-                        <li>Company Maintenance</li>
-                        <li>Employees
+                        {{-- <li>Company Maintenance</li> --}}
+                        {{-- <li>Employees --}}
                             <ul>
-                                <li>Reports
+                                <li>
+                                    <a href="C:/xampp/htdocs/LavLTE">Reports
                                     <ul>
-                                        <li>Report1</li>
-                                        <li>Report2</li>
-                                        <li>Report3</li>
+                                        {{-- <li>Report1</li> --}}
+                                        {{-- <li>Report2</li> --}}
+                                        {{-- <li>Report3</li> --}}
                                     </ul>
+                                </a>
                                 </li>
-                                <li>Employee Maint.</li>
+                                {{-- <li>Employee Maint.</li> --}}
                             </ul>
                         </li>
-                        <li>Human Resources</li>
+                        {{-- <li>Human Resources</li> --}}
                     </ul>
                 </li>
             </ul>
