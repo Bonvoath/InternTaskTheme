@@ -1,4 +1,7 @@
 @extends('layout.app')
+@section('css')
+<link rel="stylesheet" href="{{asset('css/dropzone.css')}}">
+@endsection
 @section('content')
 <div class="container">
     <h3>Image Management</h3>
@@ -25,9 +28,10 @@
                                     </form>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary"><i class="fa fa-"></i> Upload image</button>
+                                    <button type="button" class="btn btn-primary">
+                                        <i class="fa fa-"></i> Upload image
+                                    </button>
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                  
                                 </div>
                               </div>
                             </div>
