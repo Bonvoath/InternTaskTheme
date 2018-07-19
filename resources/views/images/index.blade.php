@@ -133,9 +133,6 @@
             </ul>
             
             {{-- <img src="{{ asset('storage/avatar.png') }}" alt=""> --}}
-            <?php 
-                Storage::allFiles('app/public/');
-            ?>
         </div>
         {{-- <div class="col-md-1"></div> --}}
         
