@@ -1,17 +1,22 @@
 // crud ajax
 var User = {};
 // get user
-User.toList = function(callback)
-{
+User.toList = function (callback) {
     let self = this;
-    return new Promise(function(resolve, reject){
+    return new Promise(function (resolve, reject) {
         $.ajax({
             type: 'POST',
-            url:'/user/list'
-        }).done(function(res){
-            console.log(res);
-            self.tables = res.users;
-            resolve(res.users);
+            url: '/user/list',
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        }).done(function (res) {
+            if (res.isError == false) {
+                self.tables = res.data;
+                resolve();
+            } else {
+                reject(res);
+            }
         });
     });
 }
