@@ -71,6 +71,8 @@
         </div>
     </div>
 </div>
+@endsection
+@section('js')
 
 <script src="{{asset('js/models/user.js')}}"></script>
 <script src="{{asset('js/users/index.js')}}"></script>

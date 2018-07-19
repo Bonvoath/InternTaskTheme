@@ -14,23 +14,6 @@ Auth::routes();
 // Route to all page in dashboard
 Route::get('/', 'HomeController@index');
 
-Route::get('/dashboard2', 'HomeController@dashboard2');
-Route::get('/widgets','HomeController@widgets');
-Route::get('/chartjs', 'HomeController@chartjs');
-Route::get('/morris', 'HomeController@morris');
-Route::get('/flot', 'HomeController@flot');
-Route::get('/inline', 'HomeController@inline');
-Route::get('/general', 'HomeController@general');
-Route::get('/icons', 'HomeController@icons');
-Route::get('/buttons', 'HomeController@buttons');
-Route::get('/sliders', 'HomeController@slider');
-Route::get('/timeline', 'HomeController@timeline');
-// Route for Images magement
-Route::get('/image/makeDir', 'ImageController@makeDir');
-// Route Image upload
-Route::get('/image/upload', 'ImageController@upload');
-Route::get('/image', 'ImageController@index');
-
 Route::group(['prefix' => 'image'], function(){
     Route::get('', 'ImageController@index');
     Route::post('/list', 'ImageController@list');
@@ -39,9 +22,9 @@ Route::group(['prefix' => 'image'], function(){
 });
 
 // Rout for Users Management
-Route::get('userLists', 'UserController@index');
 Route::group(['prefix'=>'user'], function(){
-    Route::get('/getUser', 'UserController@getUser'); 
+    Route::get('', 'UserController@index');
+    Route::post('/list', 'UserController@list'); 
     Route::post('/create', 'UserController@store');
     Route::delete('/delete/{id}', 'UserController@destroy');
     Route::get('/edit/{id}', 'UserController@edit');
