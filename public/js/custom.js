@@ -1,0 +1,14 @@
+$(function(){
+    $("#btn-th").click(function(){
+        $('.list-view').addClass('hide');
+        $('.grid-view').removeClass('hide');
+        $('#btn-th').addClass('active');
+        $('#btn-list').removeClass('active');
+    });
+    $('#btn-list').click(function(){
+        $('.list-view').removeClass('hide');
+        $('.grid-view').addClass('hide');
+        $('#btn-list').addClass('active');
+        $('#btn-th').removeClass('active');
+    });
+});
