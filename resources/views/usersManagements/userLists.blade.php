@@ -71,6 +71,7 @@
         </div>
     </div>
 </div>
-<script src="{{asset('js/users/index.js')}}"></script>
+
 <script src="{{asset('js/models/user.js')}}"></script>
+<script src="{{asset('js/users/index.js')}}"></script>
 @endsection
