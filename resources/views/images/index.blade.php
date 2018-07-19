@@ -92,9 +92,9 @@
     </div>
     <br>
     <div class="row">
-        <div class="col-md-3 col-sm-3 col-xs-12" style="background-color: white;">
-            <ul id="tree2">
-                <li>TECH
+        <div class="col-md-3 col-sm-3 col-xs-12">
+            {{-- <ul id="tree2">
+                <li>Human
                     <ul>
                         <li>Company Maintenance</li>
                          <li>Employees
@@ -112,7 +112,7 @@
                         <li>Human Resources</li>
                     </ul>
                 </li>
-                <li>XRP
+                <li>Cartoon
                     <ul>
                         <li>Company Maintenance</li>
                         <li>Employees
@@ -130,7 +130,12 @@
                         <li>Human Resources</li>
                     </ul>
                 </li>
-            </ul>
+            </ul> --}}
+            
+            {{-- <img src="{{ asset('storage/avatar.png') }}" alt=""> --}}
+            <?php 
+                Storage::allFiles('app/public/');
+            ?>
         </div>
         {{-- <div class="col-md-1"></div> --}}
         
