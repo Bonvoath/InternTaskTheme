@@ -17,36 +17,27 @@ class UserController extends Controller
         $data['users'] = $user;
         return Response::json($data);
     }
-    // get user
-    public function post()
-    {
-        $posts = User::orderBy('title' , 'desc')->paginate(5);
-        return view('pages.post')->with('posts', $posts);
-    }
-    // create
-    public function showCreate()
-    {
-        return view('usersManagements.create');   
-    }
 
     public function store(Request $request)
-    {
-        $request->validate([
-            'name' => 'bail|required|unique:posts|max:255',
-            'email' => 'required',
-            'password' => 'required',
-        ]);
-        $post = new User;
-        $post->name = $request->input('name');
-        $post->email = $request->input('email');
-        $post->password = $request->input('password');
-        $post->save();
-        return Response::json($post);   
+    { 
+        $validator = Validator::make($request->all(), User::validateUsers());
+        if ($validator->fails()){
+            $this->invalid($validator);
+        }else{
+            $user = new User;
+            $user->name = $request->input('name');
+            $user->email = $request->input('email');
+            $user->password = $request->input('password');
+            $user->save();
+        }
+        return Response::json($user);  
     }
     // update
-    public function update()
+    public function edit($id)
     {
-        return view('usersManagements.user');
+        $user = User::find($id);
+        $data['user'] = $user;
+        return Response::json($data);
     }
     // delete
     public function destroy($id)

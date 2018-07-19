@@ -27,4 +27,15 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+
+    protected $table = 'Users';
+
+    public static function validateUsers(){
+        $user = array(
+            'name'=> 'required|unique:Users',
+            'email'=> 'required|unique:Users',
+            'password'=> 'required|unique:Users'
+        );
+        return $user;
+    }
 }

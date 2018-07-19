@@ -12,8 +12,8 @@
                     <div class="panel-body">
                         <form id="form" method="POST">
                             <div class="form-group">
-                                    <label for="exampleInputEmail1">User Name</label>
-                                    <input type="text" name="name" class="form-control" id="name" placeholder="Enter Username">
+                                <label for="exampleInputEmail1">User Name</label>
+                                <input type="text" name="name" class="form-control" id="name" placeholder="Enter Username">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">User Email</label>

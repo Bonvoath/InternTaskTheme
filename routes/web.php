@@ -11,7 +11,7 @@
 |
 */
 Auth::routes();
-
+// Route to all page in dashboard
 Route::get('/', 'HomeController@index');
 Route::get('/dashboard2', 'HomeController@dashboard2');
 Route::get('/widgets','HomeController@widgets');
@@ -28,18 +28,17 @@ Route::get('/timeline', 'HomeController@timeline');
 Route::get('/image/makeDir', 'ImageController@makeDir');
 // Route Image upload
 Route::get('/image/upload', 'ImageController@upload');
-// Rout for Users Management
-Route::get('/userLists', 'UserController@index');
-
-Route::get('/', 'UserController@index'); 
-Route::get('/getUser', 'UserController@getUser'); 
-
-Route::post('/post', 'UserController@store');
-Route::get('createUser', 'UserController@showCreate');
-Route::delete('/user/{id}', 'UserController@destroy');
-// image
 Route::get('/image', 'ImageController@index');
 
+// Rout for Users Management
+Route::get('userLists', 'UserController@index');
+Route::group(['prefix'=>'user'], function(){
+    Route::get('/getUser', 'UserController@getUser'); 
+    Route::post('/create', 'UserController@store');
+    Route::delete('/delete/{id}', 'UserController@destroy');
+    Route::get('/edit/{id}', 'UserController@edit');
+});
+// Route for manage Role user
 Route::group(['prefix'=>'role'], function(){
     Route::get('', 'RoleController@index');
     Route::post('/list', 'RoleController@list');
