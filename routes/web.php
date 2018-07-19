@@ -13,31 +13,26 @@
 Auth::routes();
 
 Route::get('/', 'HomeController@index');
-Route::get('/dashboard2', 'HomeController@dashboard2');
-Route::get('/widgets','HomeController@widgets');
-Route::get('/chartjs', 'HomeController@chartjs');
-Route::get('/morris', 'HomeController@morris');
-Route::get('/flot', 'HomeController@flot');
-Route::get('/inline', 'HomeController@inline');
-Route::get('/general', 'HomeController@general');
-Route::get('/icons', 'HomeController@icons');
-Route::get('/buttons', 'HomeController@buttons');
-Route::get('/sliders', 'HomeController@slider');
-Route::get('/timeline', 'HomeController@timeline');
-// Route for Images magement
-Route::get('/image/makeDir', 'ImageController@makeDir');
-// Route Image upload
-Route::get('/image/upload', 'ImageController@upload');
 
+Route::group(['prefix' => 'image'], function(){
+    Route::get('', 'ImageController@index');
+    Route::post('/list', 'ImageController@list');
+    Route::post('/makeDir', 'ImageController@makeDir');
+    Route::post('/upload', 'ImageController@upload');
+});
 
 // Rout for Users Management
 Route::get('/userLists', 'UserController@index');
-Route::get('/user/create', 'UserController@create');
-Route::get('/user/update', 'UserController@update');
-// image
-Route::get('/image', 'ImageController@index');
+
+Route::get('/user', 'UserController@index'); 
+Route::get('/getUser', 'UserController@getUser'); 
+
+Route::post('/post', 'UserController@store');
+Route::get('createUser', 'UserController@showCreate');
+Route::delete('/user/{id}', 'UserController@destroy');
 
 Route::group(['prefix'=>'role'], function(){
     Route::get('', 'RoleController@index');
     Route::post('/list', 'RoleController@list');
+    Route::post('/save', 'RoleController@store');
 });

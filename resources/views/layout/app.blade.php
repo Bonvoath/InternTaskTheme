@@ -5,7 +5,9 @@
     <meta name="csrf-token" content = "{{csrf_token()}}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="_token" content="{!! csrf_token() !!}" />
     <title>Admin LTE</title>
+    
     <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/font-awesome.css')}}">
     <link rel="stylesheet" href="{{asset('css/them.css')}}">
@@ -233,14 +235,20 @@
                   <li class="dropdown user user-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                       <img src="{{asset('img/user2-160x160.jpg')}}" class="user-image" alt="User Image">
-                      <span class="hidden-xs">{{Auth::user()->name}}</span>
+                      <span class="hidden-xs">
+                        @if(Auth::check())
+                          {{Auth::user()->name}}
+                        @endif
+                        </span>
                     </a>
                     <ul class="dropdown-menu">
                       <!-- User image -->
                       <li class="user-header">
                         <img src="{{asset('img/user2-160x160.jpg')}}" class="img-circle" alt="User Image">
                         <p>
-                        {{Auth::user()->name}}
+                        @if(Auth::check())
+                          {{Auth::user()->name}}
+                        @endif
                           <small>Member since Nov. 2012</small>
                         </p>
                       </li>
@@ -265,7 +273,10 @@
                           <a href="#" class="btn btn-default btn-flat">Profile</a>
                         </div>
                         <div class="pull-right">
-                          <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                          <form id="frm-logout" action="{{ route('logout') }}" method="POST">
+                              {{ csrf_field() }}
+                              <button class="btn btn-default btn-flat">Sign out</button>
+                          </form>
                         </div>
                       </li>
                     </ul>
@@ -891,6 +902,10 @@
 <script src="{{asset('js/them.js')}}"></script>
 <!-- page script -->
 <script src="{{asset('js/custom.js')}}"></script>
+{{-- crud js --}}
+<script src="{{asset('js/models/user.js')}}"></script>
+
 @yield('js')
+
 </body>
 </html>

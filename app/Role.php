@@ -7,10 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 class Role extends Model
 {
     protected $table = 'Roles';
+    public $timestamps = false;
 
     public static function validateRole(){
         $roles = array(
-            'name'=> 'required|unique:Roles'
+            'Name'=> 'required|unique:Roles'
         );
 
         return $roles;
