@@ -5,6 +5,13 @@
             Role.renderTable($('#ltable tbody'));
         });
 
+        let req = {
+            type: 'local',
+            path: 'image/',
+            name: 'logo'
+        }
+        Directory.makeDir(req);
+
         $('#modalRole').modal({
             backdrop: false,
             show: false

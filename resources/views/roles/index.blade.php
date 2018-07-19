@@ -42,6 +42,7 @@
 </div>
 @endsection
 @section('js')
+    <script src="{{asset('js/models/directory.js')}}"></script>
     <script src="{{asset('js/models/role.js')}}"></script>
     <script src="{{asset('js/roles/index.js')}}"></script>
 @endsection

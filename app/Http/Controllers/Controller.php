@@ -26,6 +26,11 @@ class Controller extends BaseController
         $this->result['message'] = message;
     }
 
+    protected function ex($e)
+    {
+        $this->result['message'] = $e->getMessage();
+    }
+
     protected function setData($data){
         $this->result['isError'] = false;
         $this->result['data'] = $data;
