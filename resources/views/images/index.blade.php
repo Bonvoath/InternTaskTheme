@@ -93,7 +93,7 @@
     <br>
     <div class="row">
         <div class="col-md-3 col-sm-3 col-xs-12">
-            {{-- <ul id="tree2">
+            <ul id="tree2">
                 <li>Human
                     <ul>
                         <li>Company Maintenance</li>
@@ -130,7 +130,7 @@
                         <li>Human Resources</li>
                     </ul>
                 </li>
-            </ul> --}}
+            </ul>
             
             {{-- <img src="{{ asset('storage/avatar.png') }}" alt=""> --}}
             <?php 

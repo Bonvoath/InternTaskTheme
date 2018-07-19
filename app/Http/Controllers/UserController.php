@@ -1,52 +1,53 @@
 <?php
+
 namespace App\Http\Controllers;
-use App\Http\Controllers\UserController;
+
 use Illuminate\Http\Request;
-use Response;
 use App\User;
 use Validator;
+use Auth;
+
 class UserController extends Controller
 {
-    public function index()
+    public function __construct()
     {
-        return view('usersManagements.userLists');   
-    }
-    public function getUser()
-    {
-        $user = User::all();
-        $data['users'] = $user;
-        return Response::json($data);
-    }
-    // get user
-    public function post()
-    {
-        $posts = User::orderBy('title' , 'desc')->paginate(5);
-        return view('pages.post')->with('posts', $posts);
-    }
-    // create
-    public function showCreate()
-    {
-        return view('usersManagements.create');   
+        $this->middleware('auth');
     }
 
-    public function store(Request $request)
+    public function index()
     {
-        $request->validate([
-            'name' => 'bail|required|unique:posts|max:255',
-            'email' => 'required',
-            'password' => 'required',
-        ]);
-        $post = new User;
-        $post->name = $request->input('name');
-        $post->email = $request->input('email');
-        $post->password = $request->input('password');
-        $post->save();
-        return Response::json($post);   
+        return view('users.index');   
+    }
+
+    public function list(Request $request)
+    {
+        //$user = User::all();
+
+        //$this->setData($user);
+        
+        return response()->json($this->result);
+    }
+/*
+    public function store(Request $request)
+    { 
+        $validator = Validator::make($request->all(), User::validateUsers());
+        if ($validator->fails()){
+            $this->invalid($validator);
+        }else{
+            $user = new User;
+            $user->name = $request->input('name');
+            $user->email = $request->input('email');
+            $user->password = $request->input('password');
+            $user->save();
+        }
+        return Response::json($user);  
     }
     // update
-    public function update()
+    public function edit($id)
     {
-        return view('usersManagements.user');
+        $user = User::find($id);
+        $data['user'] = $user;
+        return Response::json($data);
     }
     // delete
     public function destroy($id)
@@ -56,4 +57,5 @@ class UserController extends Controller
         $user->delete();
         return Response::json($data);
     }
+    */
 }
