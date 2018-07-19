@@ -1,11 +1,11 @@
 @extends('layout.app')
 @section('content')
 <div class="container">
-        <div class="row">
-                <div class="col-md-12">
-                    <h1 class="text-center">Add User</h1>
-                </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center">Add User</h1>
             </div>
+        </div>
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
                 Add Post
             </button>
@@ -20,7 +20,6 @@
                     </div>
                     <form id="form" method="POST">
                     <div class="modal-body">
-                        
                         <div class="form-group">
                             <label for="exampleInputEmail1">User Name</label>
                             <input type="text" name="name" class="form-control" id="name" placeholder="Enter Username">
@@ -39,11 +38,11 @@
                         <input type="button" class="btn btn-danger" id="edite" value="Update">
                         <button type="button" name="button_action" class="btn btn-secondary" id="" data-dismiss="modal">Close</button>
                     </div>
-                    </form>	
-                  </div>
-                </div>
-              </div>
-              <br><br>
+                </form>	
+            </div>
+        </div>
+    </div>
+    <br><br>
     <div class="row">
         <div class="col-md-12">
             <table id="ltable" class="table table-bordered">
