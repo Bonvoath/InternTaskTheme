@@ -1,23 +1,33 @@
 <?php
+
 namespace App\Http\Controllers;
-use App\Http\Controllers\UserController;
+
 use Illuminate\Http\Request;
-use Response;
 use App\User;
 use Validator;
+use Auth;
+
 class UserController extends Controller
 {
-    public function index()
+    public function __construct()
     {
-        return view('usersManagements.userLists');   
-    }
-    public function getUser()
-    {
-        $user = User::all();
-        $data['users'] = $user;
-        return Response::json($data);
+        $this->middleware('auth');
     }
 
+    public function index()
+    {
+        return view('users.index');   
+    }
+
+    public function list(Request $request)
+    {
+        //$user = User::all();
+
+        //$this->setData($user);
+        
+        return response()->json($this->result);
+    }
+/*
     public function store(Request $request)
     { 
         $validator = Validator::make($request->all(), User::validateUsers());
@@ -47,4 +57,5 @@ class UserController extends Controller
         $user->delete();
         return Response::json($data);
     }
+    */
 }

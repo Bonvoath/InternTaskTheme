@@ -3,30 +3,32 @@ var User = {};
 // get user
 User.toList = function(callback)
 {
-    $.ajax({
-        type: 'GET',
-        url:'/user/getUser'
-    }).done(function(res){
-        callback(res.users);
+    let self = this;
+    return new Promise(function(resolve, reject){
+        $.ajax({
+            type: 'POST',
+            url:'/user/list'
+        }).done(function(res){
+            console.log(res);
+            self.tables = res.users;
+            resolve(res.users);
+        });
     });
 }
-User.toList(function(data){
-    renderTable(data);
-});
-// get user
-function renderTable(data){
-    $('#ltable tbody').html('');
-    $.each(data, function(index, user){
+
+User.renderTable = function(element){
+    element.html('');
+    $.each(this.tables, function(index, user){
         var row = '<tr data-id="'+user.id+'">'+
             '<td>'+(index+1)+'</td>'+
             '<td>'+user.name+'</td>'+
             '<td>'+user.email+'</td>'+
             '<td>'+user.created_at+'</td>'+
             '<td><button class="btn btn-defualt "><a href="javascript:void(0)" class="btnDel" id="tblDel">Delete</a></button> <a href="#" class="btn btn-primary btnedit hide_insert_btn" id="btnEdit" data-toggle="modal" data-target="#exampleModalCenter">Edit</a></td>'+'</tr>';
-        $('#ltable tbody').append(row);
+            element.append(row);
     });
 }
-
+/*
 // insert user
 User.saveChange = function(request, callback){
     $.ajax({
@@ -93,4 +95,4 @@ $('body').on('click', '#btnEdit' , function(){
 // var name =  $('#name').text();
 // var email =  $('#email').text();
 // var password =  $('#password').text();
-
+*/

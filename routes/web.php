@@ -22,9 +22,9 @@ Route::group(['prefix' => 'image'], function(){
 });
 
 // Rout for Users Management
-Route::get('userLists', 'UserController@index');
 Route::group(['prefix'=>'user'], function(){
-    Route::get('/getUser', 'UserController@getUser'); 
+    Route::get('', 'UserController@index');
+    Route::post('/list', 'UserController@list'); 
     Route::post('/create', 'UserController@store');
     Route::delete('/delete/{id}', 'UserController@destroy');
     Route::get('/edit/{id}', 'UserController@edit');

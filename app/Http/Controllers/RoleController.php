@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Role;
 use Illuminate\Http\Request;
 use Validator;
+use Auth;
 
 class RoleController extends Controller
 {
