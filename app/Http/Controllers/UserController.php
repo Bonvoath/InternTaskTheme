@@ -21,9 +21,9 @@ class UserController extends Controller
 
     public function list(Request $request)
     {
-        //$user = User::all();
+        $user = User::all();
 
-        //$this->setData($user);
+        $this->setData($user);
         
         return response()->json($this->result);
     }
