@@ -11,166 +11,8 @@
     <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/font-awesome.css')}}">
     <link rel="stylesheet" href="{{asset('css/them.css')}}">
+    <link rel="stylesheet" href="{{asset('css/custome.css')}}">
     <link rel="stylesheet" href="{{asset('css/skin-green.css')}}">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
-
-    <style>
-      .color-palette {
-        height: 35px;
-        line-height: 35px;
-        text-align: center;
-      }
-      .color-palette-set {
-        margin-bottom: 15px;
-      }
-  
-      .color-palette span {
-        display: none;
-        font-size: 12px;
-      }
-  
-      .color-palette:hover span {
-        display: block;
-      }
-  
-      .color-palette-box h4 {
-        position: absolute;
-        top: 100%;
-        left: 25px;
-        margin-top: -40px;
-        color: rgba(255, 255, 255, 0.8);
-        font-size: 12px;
-        display: block;
-        z-index: 7;
-      }
-      /* style for icon */
-    /* FROM HTTP://WWW.GETBOOTSTRAP.COM
-     * Glyphicons
-     *
-     * Special styles for displaying the icons and their classes in the docs.
-     */
-
-    .bs-glyphicons {
-      padding-left: 0;
-      padding-bottom: 1px;
-      margin-bottom: 20px;
-      list-style: none;
-      overflow: hidden;
-    }
-
-    .bs-glyphicons li {
-      float: left;
-      width: 25%;
-      height: 115px;
-      padding: 10px;
-      margin: 0 -1px -1px 0;
-      font-size: 12px;
-      line-height: 1.4;
-      text-align: center;
-      border: 1px solid #ddd;
-    }
-
-    .bs-glyphicons .glyphicon {
-      margin-top: 5px;
-      margin-bottom: 10px;
-      font-size: 24px;
-    }
-
-    .bs-glyphicons .glyphicon-class {
-      display: block;
-      text-align: center;
-      word-wrap: break-word; /* Help out IE10+ with class names */
-    }
-
-    .bs-glyphicons li:hover {
-      background-color: rgba(86, 61, 124, .1);
-    }
-
-    @media (min-width: 768px) {
-      .bs-glyphicons li {
-        width: 12.5%;
-      }
-    }
-    /* ------------------------- style for modal------------------------------*/
-    .example-modal .modal {
-      position: relative;
-      top: auto;
-      bottom: auto;
-      right: auto;
-      left: auto;
-      display: block;
-      z-index: 1;
-    }
-
-    .example-modal .modal {
-      background: transparent !important;
-    }
-/* tree folder for image page
- */
- .tree, .tree ul {
-    margin:0;
-    padding:0;
-    list-style:none
-}
-.tree ul {
-    margin-left:1em;
-    position:relative
-}
-.tree ul ul {
-    margin-left:.5em
-}
-.tree ul:before {
-    content:"";
-    display:block;
-    width:0;
-    position:absolute;
-    top:0;
-    bottom:0;
-    left:0;
-    border-left:1px solid
-}
-.tree li {
-    margin:0;
-    padding:0 1em;
-    line-height:2em;
-    color:#369;
-    font-weight:700;
-    position:relative
-}
-.tree ul li:before {
-    content:"";
-    display:block;
-    width:10px;
-    height:0;
-    border-top:1px solid;
-    margin-top:-1px;
-    position:absolute;
-    top:1em;
-    left:0
-}
-.tree ul li:last-child:before {
-    background:#fff;
-    height:auto;
-    top:1em;
-    bottom:0
-}
-.indicator {
-    margin-right:5px;
-}
-.tree li a {
-    text-decoration: none;
-    color:#369;
-}
-.tree li button, .tree li button:active, .tree li button:focus {
-    text-decoration: none;
-    color:#369;
-    border:none;
-    background:transparent;
-    margin:0px 0px 0px 0px;
-    padding:0px 0px 0px 0px;
-    outline: 0;
-}
-    </style>
     @yield('css')
 </head>
 <body class="hold-transition skin-green sidebar-mini fixed">
@@ -393,14 +235,20 @@
                   <li class="dropdown user user-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                       <img src="{{asset('img/user2-160x160.jpg')}}" class="user-image" alt="User Image">
-                      <span class="hidden-xs">{{Auth::user()->name}}</span>
+                      <span class="hidden-xs">
+                        @if(Auth::check())
+                          {{Auth::user()->name}}
+                        @endif
+                        </span>
                     </a>
                     <ul class="dropdown-menu">
                       <!-- User image -->
                       <li class="user-header">
                         <img src="{{asset('img/user2-160x160.jpg')}}" class="img-circle" alt="User Image">
                         <p>
-                        {{Auth::user()->name}}
+                        @if(Auth::check())
+                          {{Auth::user()->name}}
+                        @endif
                           <small>Member since Nov. 2012</small>
                         </p>
                       </li>
@@ -425,7 +273,10 @@
                           <a href="#" class="btn btn-default btn-flat">Profile</a>
                         </div>
                         <div class="pull-right">
-                          <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                          <form id="frm-logout" action="{{ route('logout') }}" method="POST">
+                              {{ csrf_field() }}
+                              <button class="btn btn-default btn-flat">Sign out</button>
+                          </form>
                         </div>
                       </li>
                     </ul>

@@ -13,6 +13,7 @@
 Auth::routes();
 // Route to all page in dashboard
 Route::get('/', 'HomeController@index');
+
 Route::get('/dashboard2', 'HomeController@dashboard2');
 Route::get('/widgets','HomeController@widgets');
 Route::get('/chartjs', 'HomeController@chartjs');
@@ -30,6 +31,13 @@ Route::get('/image/makeDir', 'ImageController@makeDir');
 Route::get('/image/upload', 'ImageController@upload');
 Route::get('/image', 'ImageController@index');
 
+Route::group(['prefix' => 'image'], function(){
+    Route::get('', 'ImageController@index');
+    Route::post('/list', 'ImageController@list');
+    Route::post('/makeDir', 'ImageController@makeDir');
+    Route::post('/upload', 'ImageController@upload');
+});
+
 // Rout for Users Management
 Route::get('userLists', 'UserController@index');
 Route::group(['prefix'=>'user'], function(){
@@ -42,4 +50,5 @@ Route::group(['prefix'=>'user'], function(){
 Route::group(['prefix'=>'role'], function(){
     Route::get('', 'RoleController@index');
     Route::post('/list', 'RoleController@list');
+    Route::post('/save', 'RoleController@store');
 });

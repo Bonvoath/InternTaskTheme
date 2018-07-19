@@ -445,3 +445,6 @@
     <!-- right col -->
   </div>
 @endsection
+@section('js')
+
+@endsection

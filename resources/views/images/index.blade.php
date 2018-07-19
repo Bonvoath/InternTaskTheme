@@ -38,7 +38,9 @@
                           </div>
                 </div>
                 <div class="col-md-4">
-                    <button class="btn btn-primary btn-block" data-toggle="modal" data-target="#newfol"><i class="fa fa-plus"></i>New</button>
+                    <button class="btn btn-primary btn-block" data-toggle="modal" data-target="#newfol">
+                        <i class="fa fa-plus"></i>New
+                    </button>
                     <div class="modal fade" id="newfol" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog" role="document">
                           <div class="modal-content">
@@ -56,12 +58,14 @@
                                 </form>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-primary"><i class="fa fa-plus"></i> Add</button>
+                                <button type="button" class="btn btn-primary">
+                                    <i class="fa fa-plus"></i> Add
+                                </button>
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                             </div>
                           </div>
                         </div>
-                      </div>
+                    </div>
                 </div>
                 <div class="col-md-4">
                     <button class="btn btn-primary btn-block">View</button>
@@ -74,8 +78,12 @@
                 <div class="col-md-4"></div>
                 <div class="col-md-4">
                     <div class="btn-group">
-                        <button type="button" class="btn btn-primary"><i class="fa fa-th"></i></button>
-                        <button type="button" class="btn btn-primary"><i class="fa fa-list"></i></button>
+                        <button type="button active" id="btn-th" class="btn btn-primary">
+                            <i class="fa fa-th"></i>
+                        </button>
+                        <button type="button" id="btn-list" class="btn btn-primary">
+                            <i class="fa fa-list"></i>
+                        </button>
                       </div>
                 </div>
                 <div class="col-md-4"></div>
@@ -84,7 +92,7 @@
     </div>
     <br>
     <div class="row">
-        <div class="col-md-3" style="background-color: white; height: 500px;">
+        <div class="col-md-3 col-sm-3 col-xs-12" style="background-color: white;">
             <ul id="tree2">
                 <li>TECH
                     <ul>
@@ -125,9 +133,94 @@
             </ul>
         </div>
         {{-- <div class="col-md-1"></div> --}}
-        <div class="col-md-9" style=" background-color: #fff; height: 500px;">
-            
+        
+        {{-- //list view image --}}
+        <div class="col-md-9 col-sm-9 col-xs-12 grid-view" id="grid-view" style=" background-color: #fff;">
+            <div class="container" style="margin-top: 10px;">
+                <div class="row" style="margin-top: 10px;">
+                    <div class="col-md-2">
+                        <img src="/img/avatar.png" alt="" width="100px;" height="100px;">
+                    </div>
+                    <div class="col-md-2">
+                        <img src="/img/avatar.png" alt="" width="100px;" height="100px;">
+                    </div>
+                    <div class="col-md-2">
+                        <img src="/img/avatar.png" alt="" width="100px;" height="100px;">
+                    </div>
+                    <div class="col-md-2">
+                        <img src="/img/avatar.png" alt="" width="100px;" height="100px;">
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 10px;">
+                    <div class="col-md-2">
+                        <img src="/img/avatar.png" alt="" width="100px;" height="100px;">
+                    </div>
+                    <div class="col-md-2">
+                        <img src="/img/avatar.png" alt="" width="100px;" height="100px;">
+                    </div>
+                    <div class="col-md-2">
+                        <img src="/img/avatar.png" alt="" width="100px;" height="100px;">
+                    </div>
+                    <div class="col-md-2">
+                        <img src="/img/avatar.png" alt="" width="100px;" height="100px;">
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 10px;">
+                    <div class="col-md-2">
+                        <img src="/img/avatar.png" alt="" width="100px;" height="100px;">
+                    </div>
+                    <div class="col-md-2">
+                        <img src="/img/avatar.png" alt="" width="100px;" height="100px;">
+                    </div>
+                    <div class="col-md-2">
+                        <img src="/img/avatar.png" alt="" width="100px;" height="100px;">
+                    </div>
+                    <div class="col-md-2">
+                        <img src="/img/avatar.png" alt="" width="100px;" height="100px;">
+                    </div>
+                </div>
+            </div>
+       
         </div>
+            <div class="col-md-9 col-sm-9 col-xs-12 list-view hide" id="list-view" style="background-color: #fff;">
+                <div class="container" style="margin-top: 10px;">
+                    <div class="row" style="margin-top: 10px;">
+                        
+                        <ul>
+                            <li style="margin: 5px;">
+                                <img src="/img/avatar.png" alt="" width="100px;" height="100px;">
+                            </li>
+                            <li>
+                                <img src="/img/avatar.png" alt="" width="100px;" height="100px;">
+                            </li>
+                            <li>
+                                <img src="/img/avatar.png" alt="" width="100px;" height="100px;">
+                            </li>
+                            <li>
+                                <img src="/img/avatar.png" alt="" width="100px;" height="100px;">
+                            </li>
+                            <li>
+                                <img src="/img/avatar.png" alt="" width="100px;" height="100px;">
+                            </li>
+                            <li>
+                                <img src="/img/avatar.png" alt="" width="100px;" height="100px;">
+                            </li>
+                            <li>
+                                <img src="/img/avatar.png" alt="" width="100px;" height="100px;">
+                            </li>
+                            <li>
+                                <img src="/img/avatar.png" alt="" width="100px;" height="100px;">
+                            </li>
+                            <li>
+                                <img src="/img/avatar.png" alt="" width="100px;" height="100px;">
+                            </li>
+                            <li>
+                                <img src="/img/avatar.png" alt="" width="100px;" height="100px;">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
     </div>
 </div>
 

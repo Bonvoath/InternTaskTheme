@@ -6,6 +6,7 @@ use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use Auth;
 
 class Controller extends BaseController
 {
@@ -25,6 +26,11 @@ class Controller extends BaseController
         $this->result['message'] = message;
     }
 
+    protected function ex($e)
+    {
+        $this->result['message'] = $e->getMessage();
+    }
+
     protected function setData($data){
         $this->result['isError'] = false;
         $this->result['data'] = $data;
@@ -35,5 +41,10 @@ class Controller extends BaseController
         $message = $validation->messages()->first();
         
         $this->result['message'] = $message;
+    }
+
+    protected function isProcess($permissinId)
+    {
+        return true;
     }
 }
