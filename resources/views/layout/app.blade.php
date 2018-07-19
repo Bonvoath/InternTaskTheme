@@ -393,14 +393,20 @@
                   <li class="dropdown user user-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                       <img src="{{asset('img/user2-160x160.jpg')}}" class="user-image" alt="User Image">
-                      <span class="hidden-xs">{{Auth::user()->name}}</span>
+                      <span class="hidden-xs">
+                        @if(Auth::check())
+                          {{Auth::user()->name}}
+                        @endif
+                        </span>
                     </a>
                     <ul class="dropdown-menu">
                       <!-- User image -->
                       <li class="user-header">
                         <img src="{{asset('img/user2-160x160.jpg')}}" class="img-circle" alt="User Image">
                         <p>
-                        {{Auth::user()->name}}
+                        @if(Auth::check())
+                          {{Auth::user()->name}}
+                        @endif
                           <small>Member since Nov. 2012</small>
                         </p>
                       </li>
@@ -425,7 +431,10 @@
                           <a href="#" class="btn btn-default btn-flat">Profile</a>
                         </div>
                         <div class="pull-right">
-                          <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                          <form id="frm-logout" action="{{ route('logout') }}" method="POST">
+                              {{ csrf_field() }}
+                              <button class="btn btn-default btn-flat">Sign out</button>
+                          </form>
                         </div>
                       </li>
                     </ul>

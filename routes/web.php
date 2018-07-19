@@ -31,7 +31,7 @@ Route::get('/image/upload', 'ImageController@upload');
 // Rout for Users Management
 Route::get('/userLists', 'UserController@index');
 
-Route::get('/', 'UserController@index'); 
+Route::get('/user', 'UserController@index'); 
 Route::get('/getUser', 'UserController@getUser'); 
 
 Route::post('/post', 'UserController@store');

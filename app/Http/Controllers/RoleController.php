@@ -8,6 +8,10 @@ use Validator;
 
 class RoleController extends Controller
 {
+    public function __construct()
+    {
+        $this->isLogin();
+    }
     /**
      * Display a listing of the resource.
      *
