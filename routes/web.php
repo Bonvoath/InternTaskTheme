@@ -24,10 +24,10 @@ Route::group(['prefix' => 'image'], function(){
 // Rout for Users Management
 Route::group(['prefix'=>'user'], function(){
     Route::get('', 'UserController@index');
+    Route::get('/edit/{id}', 'UserController@edit');
     Route::post('/list', 'UserController@list'); 
     Route::post('/create', 'UserController@store');
     Route::delete('/delete/{id}', 'UserController@destroy');
-    Route::get('/edit/{id}', 'UserController@edit');
 });
 // Route for manage Role user
 Route::group(['prefix'=>'role'], function(){
