@@ -9,7 +9,7 @@
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
                 Add Post
             </button>
-              <div class="modal" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+              <div class="modal closeForm" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
@@ -35,7 +35,7 @@
                     </div>
                     <div class="modal-footer"> 
                         <input type="button" class="btn btn-primary" id="insert" value="Add User">
-                        <input type="button" class="btn btn-danger" id="edite" value="Update">
+                        <input type="button" class="btn btn-danger" id="update" value="Update">
                         <button type="button" name="button_action" class="btn btn-secondary" id="" data-dismiss="modal">Close</button>
                     </div>
                 </form>	
@@ -72,7 +72,8 @@
 </div>
 @endsection
 @section('js')
-
 <script src="{{asset('js/models/user.js')}}"></script>
 <script src="{{asset('js/users/index.js')}}"></script>
+
+
 @endsection
