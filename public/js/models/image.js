@@ -1,4 +1,4 @@
-let Images = {};
+var Images = {};
 Images.toList = function () {
     
 }
