@@ -67,9 +67,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                {{-- <div class="col-md-4">
                     <button class="btn btn-primary btn-block">View</button>
-                </div>
+                </div> --}}
             </div>
         </div>
         <div class="col-md-4"></div>
@@ -142,47 +142,94 @@
                 <div class="row" style="margin-top: 10px;">
                     <div class="col-md-2">
                         <img src="/img/avatar.png" alt="" width="100px;" height="100px;">
+                        <?php
+                            $path = "C:/xampp/htdocs/LavLTE/public/img/avatar.png";
+                            echo basename($path);
+                        ?>
                     </div>
                     <div class="col-md-2">
-                        <img src="/img/avatar.png" alt="" width="100px;" height="100px;">
+                        <img src="/img/avatar2.png" alt="" width="100px;" height="100px;">
+                        <?php
+                            $path = "C:/xampp/htdocs/LavLTE/public/img/avatar2.png";
+                            echo basename($path);
+                        ?>
                     </div>
                     <div class="col-md-2">
-                        <img src="/img/avatar.png" alt="" width="100px;" height="100px;">
+                        <img src="/img/avatar3.png" alt="" width="100px;" height="100px;">
+                        <?php
+                            $path = "C:/xampp/htdocs/LavLTE/public/img/avatar3.png";
+                            echo basename($path);
+                        ?>
                     </div>
                     <div class="col-md-2">
-                        <img src="/img/avatar.png" alt="" width="100px;" height="100px;">
+                        <img src="/img/avatar04.png" alt="" width="100px;" height="100px;">
+                        <?php
+                            $path = "C:/xampp/htdocs/LavLTE/public/img/avatar04.png";
+                            echo basename($path);
+                        ?>
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 10px;">
+                    <div class="col-md-2">
+                        <img src="/img/avatar5.png" alt="" width="100px;" height="100px;">
+                        <?php
+                            $path = "C:/xampp/htdocs/LavLTE/public/img/avatar5.png";
+                            echo basename($path);
+                        ?>
+                    </div>
+                    <div class="col-md-2">
+                        <img src="/img/photo1.png" alt="" width="100px;" height="100px;">
+                        <?php
+                            $path = "C:/xampp/htdocs/LavLTE/public/img/photo1.png";
+                            echo basename($path);
+                        ?>
+                    </div>
+                    <div class="col-md-2">
+                        <img src="/img/photo2.png" alt="" width="100px;" height="100px;">
+                        <?php
+                            $path = "C:/xampp/htdocs/LavLTE/public/img/photo2.png";
+                            echo basename($path);
+                        ?>
+                    </div>
+                    <div class="col-md-2">
+                        <img src="/img/photo3.jpg" alt="" width="100px;" height="100px;">
+                        <?php
+                            $path = "C:/xampp/htdocs/LavLTE/public/img/photo3.jpg";
+                            echo basename($path);
+                        ?>
                     </div>
                 </div>
                 <div class="row" style="margin-top: 10px;">
                     <div class="col-md-2">
                         <img src="/img/avatar.png" alt="" width="100px;" height="100px;">
+                        <?php
+                            $path = "C:/xampp/htdocs/LavLTE/public/img/avatar.png";
+                            echo basename($path);
+                        ?>
                     </div>
                     <div class="col-md-2">
                         <img src="/img/avatar.png" alt="" width="100px;" height="100px;">
+                        <?php  
+                            $path = "C:/xampp/htdocs/LavLTE/public/img/avatar.png";
+                            echo basename($path);
+                        ?>
                     </div>
                     <div class="col-md-2">
                         <img src="/img/avatar.png" alt="" width="100px;" height="100px;">
+                        <?php  
+                            $path = "C:/xampp/htdocs/LavLTE/public/img/avatar.png";
+                            echo basename($path);
+                        ?>
                     </div>
                     <div class="col-md-2">
                         <img src="/img/avatar.png" alt="" width="100px;" height="100px;">
-                    </div>
-                </div>
-                <div class="row" style="margin-top: 10px;">
-                    <div class="col-md-2">
-                        <img src="/img/avatar.png" alt="" width="100px;" height="100px;">
-                    </div>
-                    <div class="col-md-2">
-                        <img src="/img/avatar.png" alt="" width="100px;" height="100px;">
-                    </div>
-                    <div class="col-md-2">
-                        <img src="/img/avatar.png" alt="" width="100px;" height="100px;">
-                    </div>
-                    <div class="col-md-2">
-                        <img src="/img/avatar.png" alt="" width="100px;" height="100px;">
+                        <?php  
+                            $path = "C:/xampp/htdocs/LavLTE/public/img/avatar.png";
+                            echo basename($path);
+                        ?>
                     </div>
                 </div>
             </div>
-       
         </div>
             <div class="col-md-9 col-sm-9 col-xs-12 list-view hide" id="list-view" style="background-color: #fff;">
                 <div class="container" style="margin-top: 10px;">
@@ -193,16 +240,16 @@
                                 <img src="/img/avatar.png" alt="" width="100px;" height="100px;">
                             </li>
                             <li>
-                                <img src="/img/avatar.png" alt="" width="100px;" height="100px;">
+                                <img src="/img/avatar2.png" alt="" width="100px;" height="100px;">
                             </li>
                             <li>
-                                <img src="/img/avatar.png" alt="" width="100px;" height="100px;">
+                                <img src="/img/avatar3.png" alt="" width="100px;" height="100px;">
                             </li>
                             <li>
-                                <img src="/img/avatar.png" alt="" width="100px;" height="100px;">
+                                <img src="/img/avatar04.png" alt="" width="100px;" height="100px;">
                             </li>
                             <li>
-                                <img src="/img/avatar.png" alt="" width="100px;" height="100px;">
+                                <img src="/img/avatar5.png" alt="" width="100px;" height="100px;">
                             </li>
                             <li>
                                 <img src="/img/avatar.png" alt="" width="100px;" height="100px;">
