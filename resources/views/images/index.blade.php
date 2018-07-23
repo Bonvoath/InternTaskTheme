@@ -58,7 +58,7 @@
                                 </form>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-primary">
+                                <button type="button" class="btn btn-primary" id="btnAddNew">
                                     <i class="fa fa-plus"></i> Add
                                 </button>
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -94,7 +94,7 @@
     <div class="row">
         <div class="col-md-3 col-sm-3 col-xs-12">
             <ul id="tree2">
-                <li>Human
+                <li><a href="javascript://ajax" onclick="mainFol()">Human</a>
                     <ul>
                         <li>Company Maintenance</li>
                          <li>Employees

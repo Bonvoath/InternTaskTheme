@@ -16,6 +16,7 @@ class ImageController extends Controller
     public function list()
     {
         //List all image and directory from storage as json.
+        $files = Storage::allFiles($directory);
     }
 
     public function makeDir(Request $request)

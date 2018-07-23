@@ -66,4 +66,14 @@ $(function(){
     });
     //Initialization of treeviews
     $('#tree2').treed({openedClass:'glyphicon-folder-open', closedClass:'glyphicon-folder-close'});
+
+    //create folder to system Image management system
+    $('#btnAddNew').click(function(){
+
+        $.ajax({
+           
+        });
+    });
+        
+    
 });
