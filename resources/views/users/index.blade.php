@@ -1,51 +1,13 @@
 @extends('layout.app')
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <h1 class="text-center">Add User</h1>
-            </div>
+<div class="box">
+    <div class="box-header with-border"><span class="box-title">Users</span></div>
+    <div class="box-body">
+        <div>
+            <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#exampleModalCenter">New User</button>
         </div>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-                Add Post
-            </button>
-              <div class="modal closeForm" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    <form id="form" method="POST">
-                    <div class="modal-body">
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">User Name</label>
-                            <input type="text" name="name" class="form-control" id="name" placeholder="Enter Username">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">User Email</label>
-                            <input type="email" name="email" class="form-control" id="email" placeholder="Enter Email">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Password</label>
-                            <input type="password" name="password" class="form-control" id="password" placeholder="Enter Password">
-                        </div>							
-                    </div>
-                    <div class="modal-footer"> 
-                        <input type="button" class="btn btn-primary" id="insert" value="Add User">
-                        <input type="button" class="btn btn-danger" id="update" value="Update">
-                        <button type="button" name="button_action" class="btn btn-secondary" id="" data-dismiss="modal">Close</button>
-                    </div>
-                </form>	
-            </div>
-        </div>
-    </div>
-    <br><br>
-    <div class="row">
-        <div class="col-md-12">
-            <table id="ltable" class="table table-bordered">
+        <div>
+            <table id="ltable" class="table table-condensed">
                 <thead>
                     <tr>
                         <th>No</th>
@@ -70,10 +32,38 @@
         </div>
     </div>
 </div>
+<div class="modal" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Create new user</h4>
+            </div>
+            <form id="form" method="POST">
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">User Name</label>
+                    <input type="text" name="name" class="form-control" id="name" placeholder="Enter Username">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">User Email</label>
+                    <input type="email" name="email" class="form-control" id="email" placeholder="Enter Email">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Password</label>
+                    <input type="password" name="password" class="form-control" id="password" placeholder="Enter Password">
+                </div>
+            </div>						
+            <div class="modal-footer"> 
+                <input type="button" class="btn btn-primary btn-sm" id="insert" value="Save">
+                <button type="button" name="button_action" class="btn btn-secondary btn-sm" id="" data-dismiss="modal">Close</button>
+            </div>
+            </form>	
+        </div>
+    </div>
+</div>
 @endsection
 @section('js')
 <script src="{{asset('js/models/user.js')}}"></script>
 <script src="{{asset('js/users/index.js')}}"></script>
-
-
 @endsection

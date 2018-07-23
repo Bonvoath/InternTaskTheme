@@ -12,29 +12,22 @@
     <link rel="stylesheet" href="{{asset('css/font-awesome.css')}}">
     <link rel="stylesheet" href="{{asset('css/them.css')}}">
     <link rel="stylesheet" href="{{asset('css/custome.css')}}">
-    <link rel="stylesheet" href="{{asset('css/skin-green.css')}}">
+    <link rel="stylesheet" href="{{asset('css/skin-green-light.css')}}">
     @yield('css')
 </head>
-<body class="hold-transition skin-green sidebar-mini fixed">
+<body class="hold-transition skin-green-light sidebar-mini fixed">
     <div class="wrapper">
         <header class="main-header">
-            <!-- Logo -->
             <a href="{{'/'}}" class="logo">
-              <!-- mini logo for sidebar mini 50x50 pixels -->
               <span class="logo-mini"><b>A</b>LT</span>
-              <!-- logo for regular state and mobile devices -->
               <span class="logo-lg"><b>Admin</b>LTE</span>
             </a>
-            <!-- Header Navbar: style can be found in header.less -->
             <nav class="navbar navbar-static-top">
-              <!-- Sidebar toggle button-->
               <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
                 <span class="sr-only">Toggle navigation</span>
               </a>
-        
               <div class="navbar-custom-menu">
                 <ul class="nav navbar-nav">
-                  <!-- Messages: style can be found in dropdown.less-->
                   <li class="dropdown messages-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                       <i class="fa fa-envelope-o"></i>
@@ -43,9 +36,8 @@
                     <ul class="dropdown-menu">
                       <li class="header">You have 4 messages</li>
                       <li>
-                        <!-- inner menu: contains the actual data -->
                         <ul class="menu">
-                          <li><!-- start message -->
+                          <li>
                             <a href="#">
                               <div class="pull-left">
                                 <img src="{{asset('img/user2-160x160.jpg')}}" class="img-circle" alt="User Image">
@@ -57,7 +49,6 @@
                               <p>Why not buy a new awesome theme?</p>
                             </a>
                           </li>
-                          <!-- end message -->
                           <li>
                             <a href="#">
                               <div class="pull-left">
@@ -324,182 +315,23 @@
         <li class="treeview">
 
           <a href="#">
-            <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+            <i class="fa fa-dashboard"></i> <span>Managements</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="{{ url('/')}}"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
-            <li><a href="{{ url('/dashboard2')}}"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
-            <li><a href="{{ url('/userLists')}}"><i class="fa fa-circle-o"></i> User Management</a></li>
+            <li><a href="{{ url('/user')}}"><i class="fa fa-circle-o"></i> Users</a></li>
+            <li><a href="{{ url('/role')}}"><i class="fa fa-circle-o"></i> Roles</a></li>
+            <li><a href="{{ url('/permission')}}"><i class="fa fa-circle-o"></i> Permissions</a></li>
           </ul>
         </li>
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-files-o"></i>
-            <span>Layout Options</span>
-            <span class="pull-right-container">
-              <span class="label label-primary pull-right">4</span>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Top Navigation</a></li>
-            <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Boxed</a></li>
-            <li><a href="pages/layout/fixed.html"><i class="fa fa-circle-o"></i> Fixed</a></li>
-            <li><a href="pages/layout/collapsed-sidebar.html"><i class="fa fa-circle-o"></i> Collapsed Sidebar</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="{{ url('/widgets') }}">
-            <i class="fa fa-th"></i> <span>Widgets</span>
-            <span class="pull-right-container">
-              <small class="label pull-right bg-green">new</small>
-            </span>
-          </a>
-        </li>
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-pie-chart"></i>
-            <span>Charts</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-          <li><a href="{{'/chartjs'}}"><i class="fa fa-circle-o"></i> ChartJS</a></li>
-            <li><a href="{{('/morris')}}"><i class="fa fa-circle-o"></i> Morris</a></li>
-            <li><a href="{{('/flot')}}"><i class="fa fa-circle-o"></i> Flot</a></li>
-            <li><a href="{{('/inline')}}"><i class="fa fa-circle-o"></i> Inline charts</a></li>
-          </ul>
-        </li>
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-laptop"></i>
-            <span>UI Elements</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="{{'/general'}}"><i class="fa fa-circle-o"></i> General</a></li>
-            <li><a href="{{'/icons'}}"><i class="fa fa-circle-o"></i> Icons</a></li>
-            <li><a href="{{'/buttons'}}"><i class="fa fa-circle-o"></i> Buttons</a></li>
-            <li><a href="{{'/sliders'}}"><i class="fa fa-circle-o"></i> Sliders</a></li>
-            <li><a href="{{'/timeline'}}"><i class="fa fa-circle-o"></i> Timeline</a></li>
-            <li><a href="{{'/modals'}}"><i class="fa fa-circle-o"></i> Modals</a></li>
-          </ul>
-        </li>
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-edit"></i> <span>Forms</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i> General Elements</a></li>
-            <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> Advanced Elements</a></li>
-            <li><a href="pages/forms/editors.html"><i class="fa fa-circle-o"></i> Editors</a></li>
-          </ul>
-        </li>
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-table"></i> <span>Tables</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="pages/tables/simple.html"><i class="fa fa-circle-o"></i> Simple tables</a></li>
-            <li><a href="pages/tables/data.html"><i class="fa fa-circle-o"></i> Data tables</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="pages/calendar.html">
-            <i class="fa fa-calendar"></i> <span>Calendar</span>
-            <span class="pull-right-container">
-              <small class="label pull-right bg-red">3</small>
-              <small class="label pull-right bg-blue">17</small>
-            </span>
-          </a>
-        </li>
-        <li>
-          <a href="pages/mailbox/mailbox.html">
-            <i class="fa fa-envelope"></i> <span>Mailbox</span>
-            <span class="pull-right-container">
-              <small class="label pull-right bg-yellow">12</small>
-              <small class="label pull-right bg-green">16</small>
-              <small class="label pull-right bg-red">5</small>
-            </span>
-          </a>
-        </li>
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-folder"></i> <span>Examples</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="pages/examples/invoice.html"><i class="fa fa-circle-o"></i> Invoice</a></li>
-            <li><a href="pages/examples/profile.html"><i class="fa fa-circle-o"></i> Profile</a></li>
-            <li><a href="pages/examples/login.html"><i class="fa fa-circle-o"></i> Login</a></li>
-            <li><a href="pages/examples/register.html"><i class="fa fa-circle-o"></i> Register</a></li>
-            <li><a href="pages/examples/lockscreen.html"><i class="fa fa-circle-o"></i> Lockscreen</a></li>
-            <li><a href="pages/examples/404.html"><i class="fa fa-circle-o"></i> 404 Error</a></li>
-            <li><a href="pages/examples/500.html"><i class="fa fa-circle-o"></i> 500 Error</a></li>
-            <li><a href="pages/examples/blank.html"><i class="fa fa-circle-o"></i> Blank Page</a></li>
-            <li><a href="pages/examples/pace.html"><i class="fa fa-circle-o"></i> Pace Page</a></li>
-          </ul>
-        </li>
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-share"></i> <span>Multilevel</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
-            <li class="treeview">
-              <a href="#"><i class="fa fa-circle-o"></i> Level One
-                <span class="pull-right-container">
-                  <i class="fa fa-angle-left pull-right"></i>
-                </span>
-              </a>
-              <ul class="treeview-menu">
-                <li><a href="#"><i class="fa fa-circle-o"></i> Level Two</a></li>
-                <li class="treeview">
-                  <a href="#"><i class="fa fa-circle-o"></i> Level Two
-                    <span class="pull-right-container">
-                      <i class="fa fa-angle-left pull-right"></i>
-                    </span>
-                  </a>
-                  <ul class="treeview-menu">
-                    <li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
-                    <li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-            <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
-          </ul>
-        </li>
-        <li><a href="https://adminlte.io/docs"><i class="fa fa-book"></i> <span>Documentation</span></a></li>
-        <li class="header">LABELS</li>
-        <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
-        <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
-        <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li>
       </ul>
     </section>
-    <!-- /.sidebar -->
   </aside>
-      <!-- Content Header (Page header) -->
       <section class="content">
         @yield('content')  {{-- get from index file --}}
       </section>
-      <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
         <!-- Create the tabs -->
         <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
@@ -883,29 +715,17 @@
           <!-- /.form-group -->
         </form>
       </div>
-      <!-- /.tab-pane -->
     </div>
   </aside>
-  <!-- /.control-sidebar -->
-  <!-- Add the sidebar's background. This div must be placed
-       immediately after the control sidebar -->
   <div class="control-sidebar-bg"></div>
 </div>
-<!-- ./wrapper -->
-<!-- jQuery 3 -->
 <script src="{{asset('js/plugins/jquery/jquery-2.2.3.min.js')}}"></script>
 <script src="{{asset('js/plugins/bootstrap/bootstrap.min.js')}}"></script>
 
 {{-- drop zone --}}
 <script src="{{asset('js/dropzone.js  ')}}"></script>
-<!-- AdminLTE App -->
 <script src="{{asset('js/them.js')}}"></script>
-<!-- page script -->
 <script src="{{asset('js/custom.js')}}"></script>
-{{-- crud js --}}
-<script src="{{asset('js/models/user.js')}}"></script>
-
 @yield('js')
-
 </body>
 </html>

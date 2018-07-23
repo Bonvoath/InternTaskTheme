@@ -25,7 +25,9 @@
         </ul>
         <div class="tab-content no-padding">
           <!-- Morris chart - Sales -->
-          <div class="chart tab-pane active" id="revenue-chart" style="position: relative; height: 300px;"></div>
+          <div class="chart tab-pane active" id="revenue-chart" style="position: relative; height: 300px;">
+              <div class="" id="divId"></div>
+          </div>
           <div class="chart tab-pane" id="sales-chart" style="position: relative; height: 300px;"></div>
         </div>
       </div>
@@ -446,5 +448,13 @@
   </div>
 @endsection
 @section('js')
-
+<script src="{{asset('js/plugins/query/map.js')}}"></script>
+<script>
+  $('#divId').map('/role/list', {
+    btnActions: ['Edit', 'Delete'],
+    completed: function(e){
+      console.log(this);
+    }
+  });
+</script>
 @endsection
