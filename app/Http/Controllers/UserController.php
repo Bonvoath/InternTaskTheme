@@ -60,7 +60,6 @@ class UserController extends Controller
             $user = User::find($id);
             $user->name = $request->input('name');
             $user->email = $request->input('email');
-            $user->email = $request->input('password');
             $this->setData($user);
             $user->save();
         }

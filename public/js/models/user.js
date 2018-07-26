@@ -29,7 +29,7 @@ User.renderTable = function(element){
             '<td>'+user.name+'</td>'+
             '<td>'+user.email+'</td>'+
             '<td>'+user.created_at+'</td>'+
-            '<td><button class="btn btn-defualt "><a href="javascript:void(0)" class="btnDel" id="tblDel">Delete</a></button> <a href="#" class="btn btn-primary btnedit hide_insert_btn" id="btnEdit" data-toggle="modal" data-target="#updateUser">Edit</a></td>'+'</tr>';
+            '<td><button class="btn btn-defualt "><a href="javascript:void(0)" class="btnDel" id="tblDel">Delete</a></button> <a href="#" class="btn btn-primary btnedit hide_insert_btn" id="btnEdit" data-toggle="modal" data-target="#exampleModalCenter">Edit</a></td>'+'</tr>';
         element.append(row);
     });
 }
