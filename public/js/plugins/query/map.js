@@ -5,7 +5,15 @@
         columns: [],
         widths: {},
         colunmIndex: true,
-        btnActions: [],
+        edit: {
+            text: ' <a href="javascrpt:void(0)" class="btn btn-xs btn-default command-edit"><i class="fa fa-pencil" aria-hidden="true"></i></a> ',
+            show: true
+        },
+        delete: {
+            text: ' <a href="javascrpt:void(0)" class="btn btn-xs btn-danger command-delete"><i class="fa fa-trash" aria-hidden="true"></i></a> ',
+            icon: '',
+            show: true
+        },
         completed: function () { },
     };
 
@@ -60,12 +68,12 @@
                 if (_self.data.length > 0) {
                     let first = _self.data[0];
                     $.each(first, function (element, value) {
-                        let _th = '<th>' + element + '</th>';
+                        let _th = '<th column-name="' + element + '">' + element + '</th>';
                         _table.find('thead>tr').append(_th);
                     });
 
-                    if(opts.btnActions.length > 0)
-                        _table.find('thead>tr').append('<th>Action</th>');
+                    if(opts.edit.show == true || opts.delete.show == true)
+                        _table.find('thead>tr').append('<th column-name="Action">Action</th>');
                 }
 
                 $.each(_self.data, function (index, item) {
@@ -86,25 +94,25 @@
 
         function header(){
             if(opts.colunmIndex == true)
-                _table.find('thead>tr').append('<th>No</th>');
+                _table.find('thead>tr').append('<th column-name="No">No</th>');
 
             $.each(opts.columns, function (index, _value) {
-                let _th = '<th>' + _value + '</th>';
+                let _th = '<th column-name="' + _value + '">' + _value + '</th>';
                 _table.find('thead>tr').append(_th);
             });
 
-            if(opts.btnActions.length > 0)
-                _table.find('thead>tr').append('<th>Action</th>');
+            if(opts.edit.show == true || opts.delete.show == true)
+                _table.find('thead>tr').append('<th column-name="Action">Action</th>');
         }
 
         function makeAction(){
             let _td = $('<td></td>');
-            if(opts.btnActions.length > 0){
-                $.each(opts.btnActions, function (index, _value) {
-                    let _link = '<a href="javascrpt:void(0)">' + _value + '</a> ';
-                    _td.append(_link);
-                });
-            }
+            if(opts.edit.show == true)
+                _td.append(opts.edit.text);
+
+            if(opts.delete.show == true)
+                _td.append(opts.delete.text);
+            
 
             return _td;
         }

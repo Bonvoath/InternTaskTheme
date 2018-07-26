@@ -40,6 +40,7 @@
                 <h4 class="modal-title" id="myModalLabel">Create new user</h4>
             </div>
             <form id="form" method="POST">
+            <input type="hidden" name="id">
             <div class="modal-body">
                 <div class="form-group">
                     <label for="exampleInputEmail1">User Name</label>
@@ -62,8 +63,9 @@
         </div>
     </div>
 </div>
+
 @endsection
 @section('js')
-    <script src="{{asset('js/models/user.js')}}"></script>
-    <script src="{{asset('js/users/index.js')}}"></script>
+<script src="{{asset('js/models/user.js')}}"></script>
+<script src="{{asset('js/users/index.js')}}"></script>
 @endsection

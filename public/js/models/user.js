@@ -20,7 +20,7 @@ User.toList = function (callback) {
         });
     });
 }
-
+// rander data
 User.renderTable = function(element){
     element.html('');
     $.each(this.tables, function(index, user){
@@ -29,12 +29,11 @@ User.renderTable = function(element){
             '<td>'+user.name+'</td>'+
             '<td>'+user.email+'</td>'+
             '<td>'+user.created_at+'</td>'+
-            '<td><button class="btn btn-defualt "><a href="javascript:void(0)" class="btnDel" id="tblDel">Delete</a></button> <a href="#" class="btn btn-primary btnedit hide_insert_btn" id="btnEdit" data-toggle="modal" data-target="#exampleModalCenter">Edit</a></td>'+'</tr>';
-            element.append(row);
+            '<td><button class="btn btn-defualt "><a href="javascript:void(0)" class="btnDel" id="tblDel">Delete</a></button> <a href="#" class="btn btn-primary btnedit hide_insert_btn" id="btnEdit" data-toggle="modal" data-target="#updateUser">Edit</a></td>'+'</tr>';
+        element.append(row);
     });
 }
-/*
-// insert user
+// save change data
 User.saveChange = function(request, callback){
     $.ajax({
         type: 'POST',
@@ -44,19 +43,40 @@ User.saveChange = function(request, callback){
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         }
     }).done(function (data) {
-        callback();
+        if(res.isError == false){
+            callback();
+        }
     });
 }
-$('body').on('click', '#insert', function(){
-    let user = $('#form').serialize();
-    User.saveChange(user, function(){
-        User.toList(function(data){
-            renderTable(data);
-            $('#exampleModalCenter').modal('hide');
-        }); 
-    });
-});
 
+// save change data
+User.updateChange = function(request, callback){
+    $.ajax({
+        type: 'POST',
+        url: '/user/update',
+        data: request,
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    }).done(function (res) {
+        if(res.isError == false){
+            callback();
+        }
+    });
+}
+
+// get data for edit
+User.getById = function(id, calback){
+    $.ajax({
+        type: 'GET',
+        url: '/user/edit/'+id,
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    }).done(function(res){
+        calback(res.data);
+    });
+}
 // delete user
 User.delete = function(id, callback){
     $.ajax({
@@ -69,35 +89,5 @@ User.delete = function(id, callback){
         callback(res);
     });
 }
-$('body').on('click', '#tblDel', function (){
-    let tr = $(this).closest('tr');
-    let id = tr.attr('data-id');
-    User.delete(id, function (res){
-       tr.remove(); 
-    });
-});
 
-// update
-User.getById = function(id, calback){
-    $.ajax({
-        type: 'GET',
-        url: '/user/edit/'+id,
-        headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        }
-    }).done(function(res){
-        calback(res);
-    });
-}
-$('body').on('click', '#btnEdit' , function(){
-    let tr = $(this).closest('tr');
-    let id = tr.attr('data-id');
-    User.getById(id, function(data){
-        console.log(data);
-        var name = $('#name').val(data.name);
-    });
-});
-// var name =  $('#name').text();
-// var email =  $('#email').text();
-// var password =  $('#password').text();
-*/
+

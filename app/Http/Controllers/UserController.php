@@ -27,7 +27,14 @@ class UserController extends Controller
         
         return response()->json($this->result);
     }
-/*
+     // update
+     public function edit($id)
+     {
+        $user = User::find($id);
+        $this->setData($user);
+        return response()->json($this->result);
+     }
+
     public function store(Request $request)
     { 
         $validator = Validator::make($request->all(), User::validateUsers());
@@ -37,25 +44,32 @@ class UserController extends Controller
             $user = new User;
             $user->name = $request->input('name');
             $user->email = $request->input('email');
-            $user->password = $request->input('password');
+            $user->password = bcrypt($request->password);
+            $this->setData($user);
             $user->save();
         }
-        return Response::json($user);  
+
+        return response()->json($this->result); 
     }
-    // update
-    public function edit($id)
+    // update data
+    public function update(Request $request)
     {
-        $user = User::find($id);
-        $data['user'] = $user;
-        return Response::json($data);
+        $user = User::find($request->id);
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->password = bcrypt($request->password);
+        $this->setData($user);
+        $user->save();
+
+        return response()->json($this->result); 
     }
     // delete
     public function destroy($id)
     {
-        $data['user'] = $id;
         $user = User::find($id);
+        $this->setData($user);
         $user->delete();
-        return Response::json($data);
+        return response()->json($this->result);
     }
-    */
+
 }

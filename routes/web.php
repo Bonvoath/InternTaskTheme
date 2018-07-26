@@ -25,7 +25,8 @@ Route::group(['prefix' => 'image'], function(){
 Route::group(['prefix'=>'user'], function(){
     Route::get('', 'UserController@index');
     Route::get('/edit/{id}', 'UserController@edit');
-    Route::post('/list', 'UserController@list');
+    Route::post('/update', 'UserController@update');
+    Route::post('/list', 'UserController@list'); 
     Route::post('/create', 'UserController@store');
     Route::delete('/delete/{id}', 'UserController@destroy');
 });
