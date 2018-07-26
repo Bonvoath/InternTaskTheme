@@ -5,16 +5,18 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
+
 class ImageController extends Controller
 {
     public function index()
     {
         return view('images.index');
     }
-     
+
     public function list()
     {
         //List all image and directory from storage as json.
+        $files = Storage::allFiles($directory);
     }
 
     public function makeDir(Request $request)
