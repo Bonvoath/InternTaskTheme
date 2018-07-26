@@ -29,7 +29,7 @@ User.renderTable = function(element){
             '<td>'+user.name+'</td>'+
             '<td>'+user.email+'</td>'+
             '<td>'+user.created_at+'</td>'+
-            '<td><button class="btn btn-defualt "><a href="javascript:void(0)" class="btnDel" id="tblDel">Delete</a></button> <a href="#" class="btn btn-primary btnedit hide_insert_btn" id="btnEdit" data-toggle="modal" data-target="#exampleModalCenter">Edit</a></td>'+'</tr>';
+            '<td><button class="btn btn-defualt "><a href="javascript:void(0)" class="btnDel" id="tblDel">Delete</a></button> <a href="#" class="btn btn-primary btnedit hide_insert_btn" id="btnEdit" data-toggle="modal" data-target="#updateUser">Edit</a></td>'+'</tr>';
         element.append(row);
     });
 }
@@ -37,7 +37,21 @@ User.renderTable = function(element){
 User.saveChange = function(request, callback){
     $.ajax({
         type: 'POST',
-        url: '/user/create/',
+        url: '/user/create',
+        data: request,
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    }).done(function (data) {
+        callback();
+    });
+}
+
+// save change data
+User.updateChange = function(request, callback){
+    $.ajax({
+        type: 'POST',
+        url: '/user/update',
         data: request,
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
