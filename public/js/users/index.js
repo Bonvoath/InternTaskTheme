@@ -5,17 +5,20 @@
         User.toList().then(function(){
             User.renderTable($('#ltable tbody'));
         });
-        // insert user
         
+        $('#exampleModalCenter').modal({
+            backdrop: false,
+            show: false
+        });
+
         $('body').on('click', '#insert', function(){
             let user = $('#form').serialize();
             if(isedit == false){
-                
                 User.saveChange(user, function(){
                     User.toList().then(function(){
                         User.renderTable($('#ltable tbody'));
                     });
-                    $('#exampleModalCenter').modal('hide'); 
+                    
                 });
             }
             else{
@@ -23,9 +26,9 @@
                     User.toList().then(function(){
                         User.renderTable($('#ltable tbody'));
                     });
-                    $('#exampleModalCenter').modal('hide'); 
                 });
-            }     
+            }
+            $('#exampleModalCenter').modal('hide');   
         });
 
         // edit 
@@ -34,13 +37,13 @@
             let tr = $(this).closest('tr');
             let id = tr.attr('data-id');
             User.getById(id, function(data){
-                console.log(data);
-                let name = data.data.name;
-                let email = data.data.email;
-                $('#name').val(name);
-                $('#email').val(email);
+                $('[name="id"]').val(data.id);
+                $('#name').val(data.name);
+                $('#email').val(data.email);
+                $('#exampleModalCenter').modal('show');
             });
         });
+        
         // delete data
         $('body').on('click', '#tblDel', function (){
             let tr = $(this).closest('tr');

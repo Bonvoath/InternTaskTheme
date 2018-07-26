@@ -44,25 +44,23 @@ class UserController extends Controller
             $user = new User;
             $user->name = $request->input('name');
             $user->email = $request->input('email');
-            $user->password = $request->input('password');
+            $user->password = bcrypt($request->password);
             $this->setData($user);
             $user->save();
         }
+
         return response()->json($this->result); 
     }
     // update data
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        $validator = Validator::make($request->all(), User::validateUsers());
-        if ($validator->fails()){
-            $this->invalid($validator);
-        }else{
-            $user = User::find($id);
-            $user->name = $request->input('name');
-            $user->email = $request->input('email');
-            $this->setData($user);
-            $user->save();
-        }
+        $user = User::find($request->id);
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->password = bcrypt($request->password);
+        $this->setData($user);
+        $user->save();
+
         return response()->json($this->result); 
     }
     // delete

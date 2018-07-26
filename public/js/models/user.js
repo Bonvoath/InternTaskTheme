@@ -43,7 +43,9 @@ User.saveChange = function(request, callback){
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         }
     }).done(function (data) {
-        callback();
+        if(res.isError == false){
+            callback();
+        }
     });
 }
 
@@ -56,8 +58,10 @@ User.updateChange = function(request, callback){
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         }
-    }).done(function (data) {
-        callback();
+    }).done(function (res) {
+        if(res.isError == false){
+            callback();
+        }
     });
 }
 
@@ -70,7 +74,7 @@ User.getById = function(id, calback){
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         }
     }).done(function(res){
-        calback(res);
+        calback(res.data);
     });
 }
 // delete user
