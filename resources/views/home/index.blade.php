@@ -450,11 +450,15 @@
 @section('js')
 <script src="{{asset('js/plugins/query/map.js')}}"></script>
 <script>
-  $('#divId').map('/role/list', {
-    btnActions: ['Edit', 'Delete'],
+  var obj = $('#divId').map('/user/list', {
     completed: function(e){
-      console.log(this);
+      $('#divId').find('[column-name="Action"]').css('width', '60px');
     }
+  });
+
+  $('body').on('click', '.command-edit', function(){
+    var index = $(this).closest('tr').attr('data-index');
+    alert(obj.data[index].Id);
   });
 </script>
 @endsection
