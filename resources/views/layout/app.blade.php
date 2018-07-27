@@ -323,6 +323,7 @@
           <ul class="treeview-menu">
             <li><a href="{{ url('/user')}}"><i class="fa fa-circle-o"></i> Users</a></li>
             <li><a href="{{ url('/role')}}"><i class="fa fa-circle-o"></i> Roles</a></li>
+            <li><a href="{{ url('/state')}}"><i class="fa fa-circle-o"></i> States</a></li>
             <li><a href="{{ url('/permission')}}"><i class="fa fa-circle-o"></i> Permissions</a></li>
           </ul>
         </li>

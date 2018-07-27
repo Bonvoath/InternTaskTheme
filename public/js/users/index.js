@@ -25,8 +25,7 @@
                 User.saveChange(user, function(){
                     User.toList().then(function(){
                         User.renderTable($('#ltable tbody'));
-                    });
-                    
+                    }); 
                 });
             }
             else{
@@ -36,7 +35,6 @@
                     });
                 });
             }
-            
             $('#exampleModalCenter').modal('hide');   
         });
 

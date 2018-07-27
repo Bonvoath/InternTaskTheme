@@ -36,3 +36,9 @@ Route::group(['prefix'=>'role'], function(){
     Route::post('/list', 'RoleController@list');
     Route::post('/save', 'RoleController@store');
 });
+// stackstate
+Route::group(['prefix'=>'state'], function()
+{
+   Route::get('', 'StateController@index');
+   Route::post('/listState', 'StateController@list'); 
+});

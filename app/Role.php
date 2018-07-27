@@ -13,7 +13,6 @@ class Role extends Model
         $roles = array(
             'Name'=> 'required|unique:Roles'
         );
-
         return $roles;
     }
 }
