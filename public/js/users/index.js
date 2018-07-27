@@ -11,6 +11,14 @@
             show: false
         });
 
+        $('#exampleModalCenter').on('hidden.bs.modal', function (e) {
+            $('[name="id"]').val('');
+            $('#name').val('');
+            $('#email').val('');
+            $('#password').val('');
+            isedit = false;
+          });
+
         $('body').on('click', '#insert', function(){
             let user = $('#form').serialize();
             if(isedit == false){
@@ -28,6 +36,7 @@
                     });
                 });
             }
+            
             $('#exampleModalCenter').modal('hide');   
         });
 
