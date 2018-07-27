@@ -278,95 +278,78 @@
 
 
 
-<div class="image-box">
+<div class="panel panel-default img">
     {{-- menu bar --}}
-    <div class="menubar-image">
-        <div class="col-3 table-row" id="btn-new">
-            <button class="button" data-toggle="modal" data-target="#newfol">New Folder</button>
-            {{-- model btn add new folder --}}
-            <div class="modal fade" id="newfol" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">New folder</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <form action="">
-                                <div class="form-group">
-                                    <input type="text" name="newFol" id="newFolder" class="form-control" placeholder="Enter folder name...">
-                                </div>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-primary" id="btnAddNew">
-                                <i class="fa fa-plus"></i> Add
-                            </button>
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {{-- end model btn add new folder --}}
-        </div>
-        <div class="col-3 table-row" id="btn-up">
-            <button class="button" data-toggle="modal" data-target="#upload">Upload Image</button>
-            {{-- model upload image --}}
-            <div class="modal fade" id="upload" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Upload image</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <form action="/file-upload" class="dropzone">
-                                <div class="fallback">
-                                    <input name="file" type="file" multiple />
-                                </div>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-primary">
-                                <i class="fa fa-"></i> Upload image
-                            </button>
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {{-- end model upload image --}}
-        </div>
-        <div class="col-3 table-row" id="space-btn"></div>
-        <div class="col-3 table-row">
+    <div class="panel-heading">
+            <button class="btn btn-default btn-sm" data-toggle="modal" data-target="#newfol">New Folder</button>
+            <button class="btn btn-default btn-sm" data-toggle="modal" data-target="#upload">Upload Image</button>
+        <div class="pull-right">
             <div class="btn-group">
-                <button type="button active" id="btn-th" class="btn btn-primary">
+                <button type="button active" id="btn-th" class="btn btn-default btn-sm">
                     <i class="fa fa-th"></i>
                 </button>
-                <button type="button" id="btn-list" class="btn btn-primary">
+                <button type="button" id="btn-list" class="btn btn-default btn-sm">
                     <i class="fa fa-list"></i>
                 </button>
             </div>
         </div>
+        <div class="clear-fixed"></div>
     </div>
-    {{-- //end menu bar --}}
-    {{-- content blog with tree view folder and pictures --}}
-    <div class="content-blog">
-        {{-- tree view folder --}}
-        <div class="sitebar-tree-folder table-row">
-            
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-9"></div>
         </div>
-        {{-- end tree view folder --}}
-        {{-- content view picture --}}
-        <div class="blog-image table-row">
-
-        </div>
-        {{-- end content view folder --}}
     </div>
-    {{-- //end of content blog --}}
+</div>
+<div class="modal fade" id="newfol" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">New folder</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="">
+                    <div class="form-group">
+                        <input type="text" name="newFol" id="newFolder" class="form-control" placeholder="Enter folder name...">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="btnAddNew">
+                    <i class="fa fa-plus"></i> Add
+                </button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="upload" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Upload image</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="/file-upload" class="dropzone">
+                    <div class="fallback">
+                        <input name="file" type="file" multiple />
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">
+                    <i class="fa fa-"></i> Upload image
+                </button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
 </div>
 @endsection
