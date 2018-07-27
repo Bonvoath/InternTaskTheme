@@ -281,8 +281,8 @@
 <div class="panel panel-default img">
     {{-- menu bar --}}
     <div class="panel-heading">
-            <button class="btn btn-default btn-sm" data-toggle="modal" data-target="#newfol">New Folder</button>
-            <button class="btn btn-default btn-sm" data-toggle="modal" data-target="#upload">Upload Image</button>
+            <button class="btn btn-success btn-sm" data-toggle="modal" data-target="#newfol">New Folder</button>
+            <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#upload">Upload Image</button>
         <div class="pull-right">
             <div class="btn-group">
                 <button type="button active" id="btn-th" class="btn btn-default btn-sm">
@@ -295,10 +295,146 @@
         </div>
         <div class="clear-fixed"></div>
     </div>
-    <div class="panel-body">
-        <div class="row">
-            <div class="col-sm-3"></div>
-            <div class="col-sm-9"></div>
+    <div class="panel-body" id="p-body">
+        <div class="row" id="row-img">
+            <div class="col-lg-3 col-md-3 col-sm-3" id="side-tree">
+                <!-- tree view folder -->
+                <ul id="tree2">
+                    <li>Human
+                        <ul>
+                            <li>Company Maintenance</li>
+                             <li>Employees
+                                 <ul>
+                                    <li>Reports
+                                        <ul>
+                                            <li>Report1</li>
+                                            <li>Report2</li>
+                                            <li>Report3</li>
+                                        </ul>
+                                    </li>
+                                    <li>Employee Maint.</li>
+                                </ul>
+                            </li>
+                            <li>Human Resources</li>
+                        </ul>
+                    </li>
+                    <li>Cartoon
+                        <ul>
+                            <li>Company Maintenance</li>
+                            <li>Employees
+                                <ul>
+                                    <li>Reports
+                                        <ul>
+                                            <li>Report1</li>
+                                            <li>Report2</li>
+                                            <li>Report3</li>
+                                        </ul>
+                                    </li>
+                                    <li>Employee Maint.</li>
+                                </ul>
+                            </li>
+                            <li>Human Resources</li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- end of tree view folder-->
+            </div>
+            <div class="col-lg-9 col-md-9 col-sm-9" id="blog-img">
+                {{-- display images as grid --}}
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 col-xs-12 text-center">
+                        <img src="/img/avatar3.png" alt="" width="100px;" height="100px;">
+                        <p class="text-center"><?php
+                            $path = "C:/xampp/htdocs/LavLTE/public/img/avatar3.png";
+                            echo basename($path);
+                        ?></p>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 text-center">
+                        <img src="/img/avatar04.png" alt="" width="100px;" height="100px;">
+                        <p class="text-center"><?php
+                            $path = "C:/xampp/htdocs/LavLTE/public/img/avatar04.png";
+                            echo basename($path);
+                        ?></p>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 text-center">
+                        <img src="/img/avatar3.png" alt="" width="100px;" height="100px;">
+                        <p class="text-center"><?php
+                            $path = "C:/xampp/htdocs/LavLTE/public/img/avatar3.png";
+                            echo basename($path);
+                        ?></p>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 text-center">
+                        <img src="/img/avatar04.png" alt="" width="100px;" height="100px;">
+                        <p class="text-center"><?php
+                            $path = "C:/xampp/htdocs/LavLTE/public/img/avatar04.png";
+                            echo basename($path);
+                        ?></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 col-xs-12 text-center">
+                        <img src="/img/photo1.png" alt="" width="100px;" height="100px;">
+                        <p class="text-center"><?php
+                            $path = "C:/xampp/htdocs/LavLTE/public/img/photo1.png";
+                            echo basename($path);
+                        ?></p>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 text-center">
+                        <img src="/img/photo2.png" alt="" width="100px;" height="100px;">
+                        <p class="text-center"><?php
+                            $path = "C:/xampp/htdocs/LavLTE/public/img/photo2.png";
+                            echo basename($path);
+                        ?></p>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 text-center">
+                        <img src="/img/avatar04.png" alt="" width="100px;" height="100px;">
+                        <p class="text-center"><?php
+                            $path = "C:/xampp/htdocs/LavLTE/public/img/avatar04.png";
+                            echo basename($path);
+                        ?></p>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 text-center">
+                        <img src="/img/photo3.jpg" alt="" width="100px;" height="100px;">
+                        <p class="text-center"><?php
+                            $path = "C:/xampp/htdocs/LavLTE/public/img/photo3.jpg";
+                            echo basename($path);
+                        ?></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 col-xs-12 text-center">
+                        <img src="/img/avatar.png" alt="" width="100px;" height="100px;">
+                        <p class="text-center"><?php
+                            $path = "C:/xampp/htdocs/LavLTE/public/img/avatar.png";
+                            echo basename($path);
+                        ?></p>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 text-center">
+                        <img src="/img/avatar.png" alt="" width="100px;" height="100px;">
+                        <p class="text-center"><?php  
+                            $path = "C:/xampp/htdocs/LavLTE/public/img/avatar.png";
+                            echo basename($path);
+                        ?></p>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 text-center">
+                        <img src="/img/avatar04.png" alt="" width="100px;" height="100px;">
+                        <p class="text-center"><?php
+                            $path = "C:/xampp/htdocs/LavLTE/public/img/avatar04.png";
+                            echo basename($path);
+                        ?></p>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 text-center">
+                        <img src="/img/avatar.png" alt="" width="100px;" height="100px;">
+                        <p class="text-center">
+                            <?php  
+                            $path = "C:/xampp/htdocs/LavLTE/public/img/avatar.png";
+                            echo basename($path);
+                            ?>
+                        </p>
+                    </div>
+                </div>
+                {{-- end of display images as grid --}}
+            </div>
         </div>
     </div>
 </div>
@@ -319,7 +455,7 @@
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary" id="btnAddNew">
+                <button type="button" class="btn btn-success" id="btnAddNew">
                     <i class="fa fa-plus"></i> Add
                 </button>
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
