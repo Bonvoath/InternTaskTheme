@@ -4,11 +4,14 @@
 #p-body{
     padding: 0;
 }
-#blog-img {
+.blog-img {
     background-color: #eee;
     /* padding: 0; */
 }
 #row-img {
     margin-right: 0px;
     margin-left: 0px;
+}
+ul {
+    list-style-type: none;
 }
