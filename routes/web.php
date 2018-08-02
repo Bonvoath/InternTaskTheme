@@ -37,8 +37,13 @@ Route::group(['prefix'=>'role'], function(){
     Route::post('/save', 'RoleController@store');
 });
 // stackstate
-Route::group(['prefix'=>'state'], function()
-{
-   Route::get('', 'StateController@index');
-   Route::post('/listState', 'StateController@list'); 
+Route::group(['prefix'=>'state'], function(){
+    Route::get('', 'StateController@index');
+    Route::get('/edit/{Id}', 'StateController@edit');
+    Route::post('/update', 'StateController@update');
+    Route::post('/listState', 'StateController@list');
+    Route::post('/create', 'StateController@store');
+    Route::delete('/delete/{id}', 'StateController@destroyState');
 });
+// image uploads
+

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use App\Http\Requests;
+use Session;
 
 
 class ImageController extends Controller
@@ -12,6 +14,8 @@ class ImageController extends Controller
     {
         return view('images.index');
     }
+//    dropzone upload images
+
 
     public function list()
     {
@@ -21,18 +25,18 @@ class ImageController extends Controller
 
     public function makeDir(Request $request)
     {
-        try 
+        try
         {
             $disk = $request->path;
             $dir_name = $request->name;
             $type = $request->type; // local, public, s3
-    
+
             $diskPath = $disk.$dir_name;
-    
+
             Storage::disk($type)->makeDirectory($diskPath);
         }
         catch (\Exception $e) {
-            $this->ex($e->getMessage());
+            $this->ezx($e->getMessage());
         }
 
         return response()->json($this->result);
