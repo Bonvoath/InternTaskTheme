@@ -7,6 +7,7 @@ use App\User;
 use Validator;
 use Auth;
 
+
 class UserController extends Controller
 {
     public function __construct()

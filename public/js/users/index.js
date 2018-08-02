@@ -56,7 +56,8 @@
             let tr = $(this).closest('tr');
             let id = tr.attr('data-id');
             User.delete(id, function (res){
-               tr.remove(); 
+               tr.remove();
+               console.log(id);
             });
         });
     }
