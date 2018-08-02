@@ -1,7 +1,7 @@
 @extends('layout.app')
 @section('content')
 <div class="box">
-    <div class="box-header with-border"><span class="box-title">Users</span></div>
+    <div class="box-header with-border"><span class="box-title">List States</span></div>
     <div class="box-body">
         <div>
             <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#exampleModalCenter">News User</button>
@@ -11,7 +11,7 @@
                 <thead>
                     <tr>
                         <th>No</th>
-                        <th>User Name</th>
+                        <th>State Name</th>
                         <th>Create At</th>
                         <th>Action</th>
                     </tr>
@@ -21,7 +21,7 @@
                 <tfoot>
                     <tr>
                         <th>No</th>
-                        <th>User Name</th>
+                        <th>State Name</th>
                         <th>Create At</th>
                         <th>Action</th>               
                     </tr> 
@@ -35,14 +35,14 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">Create new user</h4>
+                <h4 class="modal-title" id="myModalLabel">Create new State</h4>
             </div>
             <form id="form" method="POST">
-                <input type="hidden" name="Id">
+                <input type="hidden" name="id">
                 <div class="modal-body">
                     <div class="form-group">
-                        <label for="exampleInputEmail1">User Name</label>
-                        <input type="text" name="username" class="form-control" id="username" placeholder="Enter Username">
+                        <label for="exampleInputEmail1">State Name</label>
+                        <input type="text" name="name" class="form-control" id="name" placeholder="Enter State Name">
                     </div>
                 </div>
                 <div class="modal-footer">

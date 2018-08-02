@@ -46,7 +46,6 @@
             User.getById(id, function(data){
                 $('[name="id"]').val(data.id);
                 $('#name').val(data.name);
-                $('#email').val(data.email);
                 $('#exampleModalCenter').modal('show');
             });
         });

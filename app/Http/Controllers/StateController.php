@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\MstState;
 use Validator;
 use Auth;
+
 use Response;
 class StateController extends Controller
 {
@@ -22,6 +23,34 @@ class StateController extends Controller
         return response()->json($this->result);
     }
 
+    public function store(Request $request){
+        $validator = Validator::make($request->all(), MstState::validateState());
+        if ($validator->fails()){
+            $this->invalid($validator);
+        }else {
+            $states = new MstState();
+            $states->name = $request->input('name');
+            $this->setData($states);
+            $states->save();
+        }
+        return response()->json($this->result);
+    }
+    // find id
+    public function findId($id){
+        $states = MstState::find($id);
+        $this->setData($states);
+
+        return response()->json($this->result);
+    }
+    // update state
+    public function update(Request $request)
+    {
+        $states = MstState::find($request->id);
+        $states->name = $request->name;
+
+        $states->seve();
+        return response()->json($this->result);
+    }
     // delete
     public function destroyState($id)
     {
