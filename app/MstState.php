@@ -11,7 +11,7 @@ class MstState extends Model
 
     public static function validateState(){
         $state = array(
-            'name'=> 'required|unique:mststates',
+            'name'=> 'required|min:5|unique:mststates',
         );
         return $state;
     }

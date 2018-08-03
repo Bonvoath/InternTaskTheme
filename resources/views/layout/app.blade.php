@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="{{asset('css/them.css')}}">
     <link rel="stylesheet" href="{{asset('css/custome.css')}}">
     <link rel="stylesheet" href="{{asset('css/skin-green-light.css')}}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js">
+
     @yield('css')
 </head>
 <body class="hold-transition skin-green-light sidebar-mini fixed">
@@ -727,6 +729,7 @@
 <script src="{{asset('js/dropzone.js  ')}}"></script>
 <script src="{{asset('js/them.js')}}"></script>
 <script src="{{asset('js/custom.js')}}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/additional-methods.min.js"></script>
 @yield('js')
 </body>
 </html>

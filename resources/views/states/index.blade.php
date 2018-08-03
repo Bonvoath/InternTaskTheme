@@ -37,12 +37,13 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title" id="myModalLabel">Create new State</h4>
             </div>
-            <form id="form" method="POST">
-                <input type="hidden" name="id">
+            <form id="form" method="POST" onsubmit="return false">
+                <input type="hidden" name="id" >
                 <div class="modal-body">
                     <div class="form-group">
                         <label for="exampleInputEmail1">State Name</label>
-                        <input type="text" name="name" class="form-control" id="name" placeholder="Enter State Name">
+                        <input type="text" name="name" minlength="5" class="form-control" id="name" placeholder="Enter State Name">
+
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -51,6 +52,9 @@
                     <button type="button" name="button_action" class="btn btn-secondary btn-sm" id="" data-dismiss="modal">Close</button>
                 </div>
             </form>
+            <script>
+                $("#form").validate();
+            </script>
         </div>
     </div>
 </div>
@@ -58,4 +62,5 @@
 @section('js')
 <script src="{{asset('js/models/state.js')}}"></script>
 <script src="{{asset('js/states/index.js')}}"></script>
+
 @endsection

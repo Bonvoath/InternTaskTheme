@@ -1,5 +1,6 @@
 (function(){
     var isedit = false;
+    var insert = true;
     initializeComponent();
     function initializeComponent(){
         State.toList().then(function(data){
@@ -26,6 +27,7 @@
                State.saveChange(state , function () {
                    State.toList().then(function (data) {
                        State.randerTable($('#table tbody'));
+                       alert('success');
                        $('#exampleModalCenter').modal('hide');
                    });
                });

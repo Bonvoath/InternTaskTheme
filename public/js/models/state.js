@@ -1,4 +1,5 @@
 var State = {};
+
 State.toList = function () {
     let self = this;
     return new Promise(function (resolve, reject) {
@@ -55,6 +56,10 @@ State.saveUpdate = function (request, callback) {
         data: request,
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        success : function(response) {
+            $('#my_div').html(response.data);
+
         }
     }).done(function (res) {
         if (res.isError == false) {
