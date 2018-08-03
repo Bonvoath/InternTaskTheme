@@ -47,7 +47,7 @@
             let id = tr.attr('data-id');
             State.getById(id, function(data){
                 $('[name="id"]').val(data.id);
-                let name = $('#name').val(data.name);
+                $('#name').val(data.name);
                 $('#exampleModalCenter').modal('show');
             });
         });

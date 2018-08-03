@@ -46,8 +46,9 @@ class StateController extends Controller
     {
         $states = MstState::find($request->id);
         $states->name = $request->name;
+        $states->save();
+        $this->setData($states);
 
-        $states->seve();
         return response()->json($this->result);
     }
     // delete

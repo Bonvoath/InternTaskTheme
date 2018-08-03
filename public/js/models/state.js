@@ -72,7 +72,6 @@ State.delete = function (id, callback) {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         }
     }).done(function (res) {
-        console.log(res);
         callback(res);
     });
 }
@@ -88,7 +87,6 @@ State.getById = function (id, callback) {
     }).done(function (res) {
         callback(res.data);
     });
-
 }
 
 
