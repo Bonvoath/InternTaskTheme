@@ -47,6 +47,7 @@
                 </div>
                 <div class="modal-footer">
                     <input type="button" class="btn btn-primary btn-sm" id="insert" value="Save">
+                    <input type="hidden" class="btn btn-primary btn-sm" id="insert" value="Save">
                     <button type="button" name="button_action" class="btn btn-secondary btn-sm" id="" data-dismiss="modal">Close</button>
                 </div>
             </form>
