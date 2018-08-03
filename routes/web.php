@@ -39,7 +39,7 @@ Route::group(['prefix'=>'role'], function(){
 // stackstate
 Route::group(['prefix'=>'state'], function(){
     Route::get('', 'StateController@index');
-    Route::get('/edit/{Id}', 'StateController@edit');
+    Route::get('/edit/{id}', 'StateController@findId');
     Route::post('/update', 'StateController@update');
     Route::post('/listState', 'StateController@list');
     Route::post('/create', 'StateController@store');

@@ -282,7 +282,7 @@
     {{-- menu bar --}}
     <div class="panel-heading">
             <button class="btn btn-success btn-sm" data-toggle="modal" data-target="#newfol">New Folder</button>
-            <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#upload">Upload Image</button>
+            <button class="btn btn-success btn-sm" data-toggle="modal" data-target="#upload">Upload Image</button>
         <div class="pull-right">
             <div class="btn-group">
                 <button type="button active" id="btn-th" class="btn btn-default btn-sm">
@@ -339,31 +339,33 @@
                 </ul>
                 <!-- end of tree view folder-->
             </div>
-            <div class="col-lg-9 col-md-9 col-sm-9" id="blog-img">
+            <div class="col-lg-9 col-md-9 col-sm-9 grid-view blog-img" id="list-grid">
                 {{-- display images as grid --}}
                 <div class="row">
-                    <div class="col-md-3 col-sm-6 col-xs-12 text-center">
+                    <div class="col-md-3 col-sm-6 col-xs-6 text-center">
                         <img src="/img/avatar3.png" alt="" width="100px;" height="100px;">
-                        <p class="text-center"><?php
+                        <p class="text-center">
+                            <?php
                             $path = "C:/xampp/htdocs/LavLTE/public/img/avatar3.png";
                             echo basename($path);
-                        ?></p>
+                            ?>
+                        </p>
                     </div>
-                    <div class="col-md-3 col-sm-6 col-xs-12 text-center">
+                    <div class="col-md-3 col-sm-6 col-xs-6 text-center">
                         <img src="/img/avatar04.png" alt="" width="100px;" height="100px;">
                         <p class="text-center"><?php
                             $path = "C:/xampp/htdocs/LavLTE/public/img/avatar04.png";
                             echo basename($path);
                         ?></p>
                     </div>
-                    <div class="col-md-3 col-sm-6 col-xs-12 text-center">
+                    <div class="col-md-3 col-sm-6 col-xs-6 text-center">
                         <img src="/img/avatar3.png" alt="" width="100px;" height="100px;">
                         <p class="text-center"><?php
                             $path = "C:/xampp/htdocs/LavLTE/public/img/avatar3.png";
                             echo basename($path);
                         ?></p>
                     </div>
-                    <div class="col-md-3 col-sm-6 col-xs-12 text-center">
+                    <div class="col-md-3 col-sm-6 col-xs-6 text-center">
                         <img src="/img/avatar04.png" alt="" width="100px;" height="100px;">
                         <p class="text-center"><?php
                             $path = "C:/xampp/htdocs/LavLTE/public/img/avatar04.png";
@@ -372,28 +374,28 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-3 col-sm-6 col-xs-12 text-center">
+                    <div class="col-md-3 col-sm-6 col-xs-6 text-center">
                         <img src="/img/photo1.png" alt="" width="100px;" height="100px;">
                         <p class="text-center"><?php
                             $path = "C:/xampp/htdocs/LavLTE/public/img/photo1.png";
                             echo basename($path);
                         ?></p>
                     </div>
-                    <div class="col-md-3 col-sm-6 col-xs-12 text-center">
+                    <div class="col-md-3 col-sm-6 col-xs-6 text-center">
                         <img src="/img/photo2.png" alt="" width="100px;" height="100px;">
                         <p class="text-center"><?php
                             $path = "C:/xampp/htdocs/LavLTE/public/img/photo2.png";
                             echo basename($path);
                         ?></p>
                     </div>
-                    <div class="col-md-3 col-sm-6 col-xs-12 text-center">
+                    <div class="col-md-3 col-sm-6 col-xs-6 text-center">
                         <img src="/img/avatar04.png" alt="" width="100px;" height="100px;">
                         <p class="text-center"><?php
                             $path = "C:/xampp/htdocs/LavLTE/public/img/avatar04.png";
                             echo basename($path);
                         ?></p>
                     </div>
-                    <div class="col-md-3 col-sm-6 col-xs-12 text-center">
+                    <div class="col-md-3 col-sm-6 col-xs-6 text-center">
                         <img src="/img/photo3.jpg" alt="" width="100px;" height="100px;">
                         <p class="text-center"><?php
                             $path = "C:/xampp/htdocs/LavLTE/public/img/photo3.jpg";
@@ -402,28 +404,28 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-3 col-sm-6 col-xs-12 text-center">
+                    <div class="col-md-3 col-sm-6 col-xs-6 text-center">
                         <img src="/img/avatar.png" alt="" width="100px;" height="100px;">
                         <p class="text-center"><?php
                             $path = "C:/xampp/htdocs/LavLTE/public/img/avatar.png";
                             echo basename($path);
                         ?></p>
                     </div>
-                    <div class="col-md-3 col-sm-6 col-xs-12 text-center">
+                    <div class="col-md-3 col-sm-6 col-xs-6 text-center">
                         <img src="/img/avatar.png" alt="" width="100px;" height="100px;">
                         <p class="text-center"><?php  
                             $path = "C:/xampp/htdocs/LavLTE/public/img/avatar.png";
                             echo basename($path);
                         ?></p>
                     </div>
-                    <div class="col-md-3 col-sm-6 col-xs-12 text-center">
+                    <div class="col-md-3 col-sm-6 col-xs-6 text-center">
                         <img src="/img/avatar04.png" alt="" width="100px;" height="100px;">
                         <p class="text-center"><?php
                             $path = "C:/xampp/htdocs/LavLTE/public/img/avatar04.png";
                             echo basename($path);
                         ?></p>
                     </div>
-                    <div class="col-md-3 col-sm-6 col-xs-12 text-center">
+                    <div class="col-md-3 col-sm-6 col-xs-6 text-center">
                         <img src="/img/avatar.png" alt="" width="100px;" height="100px;">
                         <p class="text-center">
                             <?php  
@@ -435,9 +437,88 @@
                 </div>
                 {{-- end of display images as grid --}}
             </div>
+            <div class="col-md-9 col-sm-9 col-xs-12 list-view hide blog-img" id="list-view">
+                <div class="container" style="margin-top: 10px;">
+                    <div class="row" style="margin-top: 10px;">
+                        <ul>
+                            <li style="margin: 5px;">
+                                <img src="/img/avatar.png" alt="" width="100px;" height="100px;">
+                                <?php
+                            $path = "C:/xampp/htdocs/LavLTE/public/img/avatar3.png";
+                            echo basename($path);
+                            ?>
+                            </li>
+                            <li>
+                                <img src="/img/avatar2.png" alt="" width="100px;" height="100px;">
+                                <?php
+                            $path = "C:/xampp/htdocs/LavLTE/public/img/avatar3.png";
+                            echo basename($path);
+                            ?>
+                            </li>
+                            <li>
+                                <img src="/img/avatar3.png" alt="" width="100px;" height="100px;">
+                                <?php
+                            $path = "C:/xampp/htdocs/LavLTE/public/img/avatar3.png";
+                            echo basename($path);
+                            ?>
+                            </li>
+                            <li>
+                                <img src="/img/avatar04.png" alt="" width="100px;" height="100px;">
+                                <?php
+                            $path = "C:/xampp/htdocs/LavLTE/public/img/avatar3.png";
+                            echo basename($path);
+                            ?>
+                            </li>
+                            <li>
+                                <img src="/img/avatar5.png" alt="" width="100px;" height="100px;">
+                                <?php
+                            $path = "C:/xampp/htdocs/LavLTE/public/img/avatar3.png";
+                            echo basename($path);
+                            ?>
+                            </li>
+                            <li>
+                                <img src="/img/avatar.png" alt="" width="100px;" height="100px;">
+                                <?php
+                            $path = "C:/xampp/htdocs/LavLTE/public/img/avatar3.png";
+                            echo basename($path);
+                            ?>
+                            </li>
+                            <li>
+                                <img src="/img/avatar.png" alt="" width="100px;" height="100px;">
+                                <?php
+                            $path = "C:/xampp/htdocs/LavLTE/public/img/avatar3.png";
+                            echo basename($path);
+                            ?>
+                            </li>
+                            <li>
+                                <img src="/img/avatar.png" alt="" width="100px;" height="100px;">
+                                <?php
+                            $path = "C:/xampp/htdocs/LavLTE/public/img/avatar3.png";
+                            echo basename($path);
+                            ?>
+                            </li>
+                            <li>
+                                <img src="/img/avatar.png" alt="" width="100px;" height="100px;">
+                                <?php
+                            $path = "C:/xampp/htdocs/LavLTE/public/img/avatar3.png";
+                            echo basename($path);
+                            ?>
+                            </li>
+                            <li>
+                                <img src="/img/avatar.png" alt="" width="100px;" height="100px;">
+                                <?php
+                            $path = "C:/xampp/htdocs/LavLTE/public/img/avatar3.png";
+                            echo basename($path);
+                            ?>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
+{{-- modal popup --}}
 <div class="modal fade" id="newfol" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">

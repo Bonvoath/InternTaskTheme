@@ -21,6 +21,7 @@
 
         $('body').on('click', '#insert', function(){
             let user = $('#form').serialize();
+            console.log(user);
             if(isedit == false){
                 User.saveChange(user, function(){
                     User.toList().then(function(){
@@ -46,7 +47,6 @@
             User.getById(id, function(data){
                 $('[name="id"]').val(data.id);
                 $('#name').val(data.name);
-                $('#email').val(data.email);
                 $('#exampleModalCenter').modal('show');
             });
         });
