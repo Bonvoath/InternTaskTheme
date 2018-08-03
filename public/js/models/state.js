@@ -1,47 +1,47 @@
 var State = {};
-    State.toList = function(){
-        let self = this;
-        return new Promise(function (resolve, reject){
-            $.ajax({
-                type: 'POST',
-                url: '/state/listState',
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                }
-            }).done(function(res){
-                if(res.isError == false){
-                    self.data = res.data;
-                    resolve();
-                }
-                else{
-                    reject(res.message);
-                }
-            });
+State.toList = function () {
+    let self = this;
+    return new Promise(function (resolve, reject) {
+        $.ajax({
+            type: 'POST',
+            url: '/state/listState',
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        }).done(function (res) {
+            if (res.isError == false) {
+                self.data = res.data;
+                resolve();
+            }
+            else {
+                reject(res.message);
+            }
         });
-    }
-    // js rander
-    State.randerTable = function(table){
-        table.html('');
-        $.each(this.data, function(index, state){
-            var tr = '<tr data-id="'+state.Id+'">'+
-                '<td>'+( index + 1 )+'</td>'+
-                '<td>'+state.Name+'</td>'+
-                '<td>'+state.DateCreated+'</td>' +
-                '<td><button class="btn btn-danger "><a href="javascript:void(0)" class="btnDel " id="tblDel">Delete</a></button> <a href="#" class="btn btn-primary btnedit hide_insert_btn" id="btnEdit" data-toggle="modal" data-target="#exampleModalCenter">Edit</a></td>'+'</tr>';
-            table.append(tr);
-        });
-    }
+    });
+}
+// js rander
+State.randerTable = function (table) {
+    table.html('');
+    $.each(this.data, function (index, state) {
+        var tr = '<tr data-id="' + state.id + '">' +
+            '<td>' + (index + 1) + '</td>' +
+            '<td>' + state.name + '</td>' +
+            '<td>' + state.created_at + '</td>' +
+            '<td><button class="btn btn-danger "><a href="javascript:void(0)" class="btnDel " id="tblDel">Delete</a></button> <a href="#" class="btn btn-primary btnedit hide_insert_btn" id="btnEdit" data-toggle="modal" data-target="#exampleModalCenter">Edit</a></td>' + '</tr>';
+        table.append(tr);
+    });
+}
 
 
 // delete user
-State.delete = function(id, callback){
+State.delete = function (id, callback) {
     $.ajax({
         type: 'delete',
-        url: '/state/delete/'+id,
+        url: '/state/delete/' + id,
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         }
-    }).done(function(res){
+    }).done(function (res) {
         console.log(res);
         callback(res);
     });
