@@ -21,6 +21,7 @@
 
         $('body').on('click', '#insert', function(){
             let user = $('#form').serialize();
+            console.log(user);
             if(isedit == false){
                 User.saveChange(user, function(){
                     User.toList().then(function(){

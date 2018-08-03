@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -29,9 +28,9 @@ class StateController extends Controller
             $this->invalid($validator);
         }else {
             $states = new MstState();
-            $states->name = $request->input('name');
-            $this->setData($states);
+            $states->name = $request->name;
             $states->save();
+            $this->setData($states);
         }
         return response()->json($this->result);
     }

@@ -19,6 +19,7 @@
 
 
         // btn create new state
+
         $('body').on('click', '#insert', function () {
            let state = $('#form').serialize();
            if (isedit == false){
@@ -78,81 +79,3 @@
 
 
 
-
-
-
-
-// $('body').on('click' , '#insert' , function() {
-//     let state = $('#form').serialize();
-//     State.updateChange(state , function () {
-//         State.toList().then(function (data) {
-//             State.randerTable($('#table tbody'));
-//             $('#exampleModalCenter').modal('hide');
-//         });
-//     });
-// });
-// btn create new state and update state
-// $('body').on('click' , '#insert' , function () {
-//    let state = $('#form').serialize();
-//    if (isedit == false){
-//        State.saveChange(state , function () {
-//            State.toList().then(function (data) {
-//                State.randerTable($('#table tbody'));
-//            });
-//        });
-//    } else {
-//        State.saveUpdate(state , function () {
-//            State.toList().then(function (data) {
-//                State.randerTable($('#table tbody'));
-//            });
-//        });
-//    }
-//    $('#exampleModalCenter').modal('hide');
-// });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// $('body').on('click', '#insert', function(){
-//     let State = $('#form').serialize();
-//     if(isedit == false){
-//         State.saveChange(State, function(){
-//             State.toList().then(function(){
-//                 State.renderTable($('#table tbody'));
-//             });
-//         });
-//     }
-//     else{
-//         State.updateChange(State, function(){
-//             State.toList().then(function(){
-//                 State.renderTable($('#table tbody'));
-//             });
-//         });
-//     }
-//     $('#exampleModalCenter').modal('hide');
-// });
-//
-// // edit
-// $('body').on('click', '#btnEdit' , function(){
-//     isedit = true;
-//     let tr = $(this).closest('tr');
-//     let id = tr.attr('data-id');
-//     State.getById(id, function(data){
-//         $('[name="id"]').val(data.Id);
-//         $('#Name').val(data.Name);
-//         $('#exampleModalCenter').modal('show');
-//     });
-// });
