@@ -29,6 +29,8 @@ class StateController extends Controller
         }else {
             $states = new MstState();
             $states->name = $request->name;
+
+
             $states->save();
             $this->setData($states);
         }
@@ -46,10 +48,10 @@ class StateController extends Controller
     {
         $states = MstState::find($request->id);
         $states->name = $request->name;
+
+
         $states->save();
         $this->setData($states);
-
-
         return response()->json($this->result);
     }
     // delete
