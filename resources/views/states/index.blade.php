@@ -4,7 +4,7 @@
     <div class="box-header with-border"><span class="box-title">List States</span></div>
     <div class="box-body">
         <div>
-            <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#exampleModalCenter">News User</button>
+            <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#exampleModalCenter">Add New State</button>
         </div>
         <div>
             <table id="table" class="table table-condensed">
@@ -16,7 +16,8 @@
                         <th>Action</th>
                     </tr>
                 </thead>
-                <tbody> 
+                <tbody>
+
                 </tbody>
                 <tfoot>
                     <tr>
@@ -38,12 +39,15 @@
                 <h4 class="modal-title" id="myModalLabel">Create new State</h4>
             </div>
             <form id="form" method="POST" onsubmit="return false">
+                <div id="errorContainer" class="">
+                    <p>&nbsp;Please correct the following errors and try again:</p>
+                    <ul />
+                </div>
                 <input type="hidden" name="id" >
                 <div class="modal-body">
                     <div class="form-group">
                         <label for="exampleInputEmail1">State Name</label>
                         <input type="text" name="name" minlength="5" class="form-control" id="name" placeholder="Enter State Name">
-
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -52,9 +56,7 @@
                     <button type="button" name="button_action" class="btn btn-secondary btn-sm" id="" data-dismiss="modal">Close</button>
                 </div>
             </form>
-            <script>
-                $("#form").validate();
-            </script>
+
         </div>
     </div>
 </div>

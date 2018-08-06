@@ -17,7 +17,7 @@ class StateController extends Controller
     // state Lists
     public function list(Request $request)
     {
-        $states = MstState::all();
+        $states = MstState::orderBy('id', 'desc')->get();
         $this->setData($states);
         return response()->json($this->result);
     }
@@ -60,6 +60,7 @@ class StateController extends Controller
         $states->delete();
         return response()->json($this->result);
     }
+
 
 }
 

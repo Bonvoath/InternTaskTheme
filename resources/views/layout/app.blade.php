@@ -7,13 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="_token" content="{!! csrf_token() !!}" />
     <title>Admin LTE</title>
-    
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/notify/0.4.2/styles/metro/notify-metro.css">
+
     <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/font-awesome.css')}}">
     <link rel="stylesheet" href="{{asset('css/them.css')}}">
     <link rel="stylesheet" href="{{asset('css/custome.css')}}">
     <link rel="stylesheet" href="{{asset('css/skin-green-light.css')}}">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js">
+
 
     @yield('css')
 </head>
@@ -724,12 +725,16 @@
 </div>
 <script src="{{asset('js/plugins/jquery/jquery-2.2.3.min.js')}}"></script>
 <script src="{{asset('js/plugins/bootstrap/bootstrap.min.js')}}"></script>
+    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/notify/0.4.2/notify.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twbs-pagination/1.4.2/jquery.twbsPagination.min.js"></script>
 
-{{-- drop zone --}}
+
+    {{-- drop zone --}}
 <script src="{{asset('js/dropzone.js  ')}}"></script>
 <script src="{{asset('js/them.js')}}"></script>
 <script src="{{asset('js/custom.js')}}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/additional-methods.min.js"></script>
 @yield('js')
 </body>
 </html>

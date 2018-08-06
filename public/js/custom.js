@@ -74,6 +74,29 @@ $(function(){
            
         });
     });
-        
-    
+    // validation state name
+    $('#form').validate({
+        rules: {
+            name: "required"
+        },
+        messages: {
+            name: "Please enter State Name."
+        },
+        errorContainer: $('#errorContainer'),
+        errorLabelContainer: $('#errorContainer ul'),
+        wrapper: 'li'
+    });
+
+    // validation state name
+    $('.formUser').validate({
+        rules: {
+            name: "required"
+        },
+        messages: {
+            name: "Please User Name"
+        },
+        errorContainer: $('#errorUsername'),
+        errorLabelContainer: $('#errorUsername ul'),
+        wrapper: 'li'
+    });
 });

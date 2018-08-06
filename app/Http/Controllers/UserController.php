@@ -22,10 +22,9 @@ class UserController extends Controller
 
     public function list(Request $request)
     {
-        $user = User::all();
-
+        $user = User::where('name', 'LIKE', '%' .$request->search. '%')->get();
         $this->setData($user);
-        
+
         return response()->json($this->result);
     }
      // update
@@ -72,5 +71,11 @@ class UserController extends Controller
         $user->delete();
         return response()->json($this->result);
     }
+    // search user name
+//    public function search(Request $request)
+//    {
+//        $user = User::where('name', 'LIKE', '%' .$request->search. '%')->get();
+//        return response()->json($user);
+//    }
 
 }

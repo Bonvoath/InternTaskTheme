@@ -23,11 +23,17 @@
 
         $('body').on('click', '#insert', function () {
            let state = $('#form').serialize();
+
            if (isedit == false){
+
                State.saveChange(state , function () {
                    State.toList().then(function (data) {
                        State.randerTable($('#table tbody'));
-                       alert('success');
+                       swal("You insert State name successfuly!", {
+                           buttons: false,
+                           timer: 1500,
+                       });
+                       //$.notify('You insert State name successful' ,'success');
                        $('#exampleModalCenter').modal('hide');
                    });
                });
@@ -36,6 +42,10 @@
                State.saveUpdate(state, function () {
                    State.toList().then(function (data) {
                        State.randerTable($('#table tbody'));
+                       swal("You update State name successfuly!", {
+                           buttons: false,
+                           timer: 1500,
+                       });
                        $('#exampleModalCenter').modal('hide');
                    });
                });
@@ -53,14 +63,23 @@
                 $('#exampleModalCenter').modal('show');
             });
         });
-
         // delete data
+
         $('body').on('click', '#tblDel', function (){
             let tr = $(this).closest('tr');
             let Id = tr.attr('data-id');
-            console.log(Id);
-            State.delete(Id, function (res){
-                tr.remove();
+            swal({
+                title: "Are you sure?",
+                text: "Once deleted, you will not be able to recover this State name!",
+                icon: "warning",
+                buttons: true,
+                dangerMode: true,
+            }).then((willDelete) => {
+                if (willDelete) {
+                    State.delete(Id, function (res){
+                        tr.remove();
+                    });
+                }
             });
         });
     }

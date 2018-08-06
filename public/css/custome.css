@@ -154,3 +154,25 @@ margin:0px 0px 0px 0px;
 padding:0px 0px 0px 0px;
 outline: 0;
 }
+#errorContainer, #errorUsername {
+    display: none;
+    overflow: auto;
+    background-color: #FFDDDD;
+    border: 1px solid #FF2323;
+    padding-top: 1;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#errorContainer label {
+    float: none;
+    width: auto;
+}
+
+input.error {
+    border: 1px solid #DD4B39;
+}
+li{
+    list-style-type: none;
+}
+

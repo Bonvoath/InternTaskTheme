@@ -29,7 +29,7 @@ State.randerTable = function (table) {
             '<td>' + (index + 1) + '</td>' +
             '<td>' + state.name + '</td>' +
             '<td>' + state.created_at + '</td>' +
-            '<td><a href="javascript:void(0)" class="btnDel" id="tblDel"><button class="btn btn-danger ">Delete</button></a> <a href="#" class="btn btn-primary btnedit hide_insert_btn" id="getId" data-toggle="modal" data-target="#exampleModalCenter">Edit</a></td>' + '</tr>';
+            '<td><a href="javascript:void(0)" class="delete" id="tblDel"><button class="btn btn-danger ">Delete</button></a> <a href="#" class="btn btn-primary btnedit hide_insert_btn" id="getId" data-toggle="modal" data-target="#exampleModalCenter">Edit</a></td>' + '</tr>';
         table.append(tr);
     });
 }
@@ -68,19 +68,6 @@ State.saveUpdate = function (request, callback) {
     });
 }
 
-// delete state
-State.delete = function (id, callback) {
-    $.ajax({
-        type: 'delete',
-        url: '/state/delete/' + id,
-        headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        }
-    }).done(function (res) {
-        callback(res);
-    });
-}
-
 // getBy Id for update
 State.getById = function (id, callback) {
     $.ajax({
@@ -93,6 +80,20 @@ State.getById = function (id, callback) {
         callback(res.data);
     });
 }
+// delete state
+State.delete = function (id, callback) {
+    $.ajax({
+        type: 'delete',
+        url: '/state/delete/' + id,
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    }).done(function (res) {
+
+        callback(res);
+    });
+}
+
 
 
 
