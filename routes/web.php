@@ -10,7 +10,15 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+// Route::get('/admin/{vue?}', function () {
+//     return view('backend.home');
+// })->where('vue', '[\/\w\.-]*');
 
+Route::get('/{vue?}', function () {
+    return view('frontend.home');
+})->where('vue', '[\/\w\.-]*');
+
+/*
 Route::group(['prefix'=>'/'], function(){
     Route::get('/', function () {
         return view('frontend.home');
@@ -40,3 +48,4 @@ Route::group(['prefix'=>'admin'], function(){
         Route::get('/', 'ImageController@index');
     });
 });
+*/

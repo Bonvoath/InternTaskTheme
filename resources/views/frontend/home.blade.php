@@ -1,1 +1,6 @@
-<h1>Welcome frontend</h1>
+@extends('layouts.app')
+@section('content')
+<router-view></router-view>
+@endsection
+@section('js')
+@endsection
