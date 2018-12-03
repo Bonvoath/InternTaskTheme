@@ -11,6 +11,32 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::group(['prefix'=>'/'], function(){
+    Route::get('/', function () {
+        return view('frontend.home');
+    });
+
+    Route::get('/about', function(){
+        echo 'about us';
+    });
+
+    Route::get('/contact', function(){
+        echo 'contact us';
+    });
+});
+
+Route::group(['prefix'=>'admin'], function(){
+    Route::get('/', function(){
+        return view('backend.home');
+    });
+
+    Route::group(['prefix'=>'post'], function(){
+        Route::get('/', function(){
+            echo "post content";
+        });
+    });
+
+    Route::group(['prefix'=>'image'], function(){
+        Route::get('/', 'ImageController@index');
+    });
 });
